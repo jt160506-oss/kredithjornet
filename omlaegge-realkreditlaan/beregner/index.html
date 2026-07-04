@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Konverteringsberegner — nedkonvertering og opkonvertering | Kredithjørnet</title>
-<meta name="description" content="Vejledende beregner til omlægning af realkreditlån. Se ændring i ydelse, restgæld og kursgevinst ved nedkonvertering og opkonvertering — uden bankjargon.">
+<meta name="description" content="Vejledende beregner til nedkonvertering og opkonvertering af realkreditlån. Se ændring i ydelse, restgæld og kursgevinst — og hvornår et rentefald begynder at betale sig. Uden bankjargon.">
 <link rel="canonical" href="https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/">
 <meta property="og:title" content="Konverteringsberegner — nedkonvertering og opkonvertering | Kredithjørnet">
-<meta property="og:description" content="Regn vejledende på din omlægning: ydelse, restgæld og kursgevinst ved ned- og opkonvertering.">
+<meta property="og:description" content="Regn vejledende på din omlægning: ydelse, restgæld, kursgevinst — og hvornår rentefaldet betaler sig.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/">
 <meta property="og:locale" content="da_DK">
@@ -63,8 +63,12 @@
 .cv-verdict p{margin:0;color:rgba(255,255,255,.86);font-size:14px}
 .cv-verdict strong{color:#fff}
 .cv-mininote{font-size:12px;color:rgba(255,255,255,.55);margin:14px 0 0}
+.cv-tablenote{font-size:13px;color:var(--muted);margin:10px 2px 0;line-height:1.55}
 @media(max-width:860px){.cv-grid{grid-template-columns:1fr}.cv-field-2{grid-template-columns:1fr}.cv-grid2{grid-template-columns:1fr}}
 </style>
+<script type="application/ld+json">
+[{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Forside","item": "https://kredithjornet.dk/"},{"@type": "ListItem","position": 2,"name": "Omlægge realkreditlån","item": "https://kredithjornet.dk/omlaegge-realkreditlaan/"},{"@type": "ListItem","position": 3,"name": "Konverteringsberegner","item": "https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/"}]},{"@context": "https://schema.org","@type": "WebApplication","name": "Konverteringsberegner: regn på din omlægning","url": "https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/","applicationCategory": "FinanceApplication","operatingSystem": "Web","browserRequirements": "Requires JavaScript","inLanguage": "da-DK","description": "Vejledende beregner til nedkonvertering og opkonvertering af realkreditlån. Se ændring i ydelse, restgæld og kursgevinst — og hvornår et rentefald begynder at betale sig. Uden bankjargon.","publisher": {"@type": "Organization","name": "Kredithjørnet","url": "https://kredithjornet.dk/","logo": {"@type": "ImageObject","url": "https://kredithjornet.dk/favicon.svg"}},"offers": {"@type": "Offer","price": "0","priceCurrency": "DKK"},"isAccessibleForFree": true},{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Hvorfor skal jeg selv indtaste kurserne?","acceptedAnswer": {"@type": "Answer","text": "Kurserne på realkreditobligationer ændrer sig hver dag og afhænger af markedet. Et gratis værktøj kan ikke vise dine faktiske kurser i realtid. Du kan få de aktuelle kurser hos dit realkreditinstitut eller din bank og indtaste dem her for et mere retvisende billede."}},{"@type": "Question","name": "Er resultatet et tilbud?","acceptedAnswer": {"@type": "Answer","text": "Nej. Tallene er vejledende og illustrative og er ikke et tilbud eller en garanti. De skal hjælpe dig med at forstå mekanikken, før du taler med din bank eller dit realkreditinstitut, som kan give dig en konkret beregning."}},{"@type": "Question","name": "Hvad er en kuponrente?","acceptedAnswer": {"@type": "Answer","text": "Kuponrenten er renten på den obligation, der ligger bag dit realkreditlån. Det er den, du bruger, når du sammenligner dit nuværende lån med et muligt nyt lån. Den er ikke det samme som din samlede pris, fordi bidragssats og kurser også spiller ind."}},{"@type": "Question","name": "Hvor meget skal renten falde, før nedkonvertering betaler sig?","acceptedAnswer": {"@type": "Answer","text": "Der findes ikke ét fast tal, men en udbredt tommelfingerregel er omkring 1,5 procentpoint. Selve omkostningerne henter du typisk hjem på under et par år, så det afgørende er mere, om en markant lavere kuponrente overhovedet er tilgængelig i markedet, og hvor længe du bliver i lånet. Jo større din restgæld er, jo mindre rentefald skal der til, før det batter. Prøv dine egne tal i beregneren for at se din personlige break-even."}},{"@type": "Question","name": "Hvor længe skal jeg blive i lånet, før det kan betale sig?","acceptedAnswer": {"@type": "Answer","text": "Beregneren viser, hvornår omkostningerne er tjent hjem via den lavere ydelse — ofte inden for et par år ved et fornuftigt rentefald. Bliver du i lånet længere end det, er resten besparelse. Planlægger du at sælge boligen kort efter en omlægning, kan gevinsten omvendt blive lille. Tidshorisonten er derfor mindst lige så vigtig som selve rentefaldet."}},{"@type": "Question","name": "Er det her rådgivning?","acceptedAnswer": {"@type": "Answer","text": "Nej. Beregneren og guiderne på Kredithjørnet er generel information. Det er ikke personlig rådgivning, og Kredithjørnet er ikke boligkreditformidler. Når du skal beslutte dig, bør du få en konkret beregning hos din bank eller dit realkreditinstitut."}}]}]
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
@@ -115,7 +119,7 @@
     <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Vejledende værktøj</span>
     <h1>Konverteringsberegner: regn på din <span class="accent">omlægning</span></h1>
     <p class="lede">Få et hurtigt, vejledende overblik over, hvad en omlægning betyder for din ydelse, din restgæld og en eventuel kursgevinst — uden bankjargon, og uden login.</p>
-    <p class="byline">Vejledende værktøj · Senest opdateret juni 2026</p>
+    <p class="byline">Vejledende værktøj · Senest opdateret juli 2026</p>
   </div>
 </section>
 
@@ -186,6 +190,50 @@
     </ul>
   </article>
 
+  <article class="prose" id="hvornaar-betaler-det-sig">
+    <h2>Hvornår betaler nedkonvertering sig?</h2>
+    <p>Det korte svar: en <a href="/omlaegge-realkreditlaan/nedkonvertering/">nedkonvertering</a> begynder at give mening, når renten er faldet nok til, at din nye, lavere ydelse mere end opvejer omkostningerne ved at lægge om. Det svære er, at "nok" afhænger af tre ting på én gang — hvor stort dit rentefald er, hvor stor din restgæld er, og hvor længe du bliver i lånet.</p>
+    <p>En udbredt tommelfingerregel siger, at renten skal være faldet <strong>omkring 1,5 procentpoint</strong>, før en omlægning er værd at overveje. Men reglen handler ikke om at tjene selve gebyrerne hjem — dem henter du typisk ind på under et par år. Den handler om, at du sjældent kan få en markant lavere kuponrente, medmindre markedet er flyttet et godt stykke, og at du ved en omlægning optager et nyt lån til en kurs under 100, så din restgæld vokser en smule. De reelle spørgsmål er derfor: kan du overhovedet få en lavere kupon lige nu, og bliver du i lånet længe nok?</p>
+
+    <h3>Hvad rentefaldet betyder for din besparelse</h3>
+    <p>Tabellen viser et illustrativt eksempel: et lån på 2 mio. kr. med 27 år tilbage, en nuværende kuponrente på 5 %, en bidragssats på 0,7 % og anslåede omkostninger på 12.000 kr. Jo større rentefaldet er, jo hurtigere er omkostningerne tjent hjem — men bemærk, at gebyrerne er hentet ind på ret kort tid selv ved et beskedent fald.</p>
+    <div class="table-card">
+      <table class="matrix">
+        <thead><tr><th>Rentefald (fald i kuponrente)</th><th>Månedlig besparelse</th><th>Omkostninger tjent hjem efter</th></tr></thead>
+        <tbody>
+          <tr><td>0,5 procentpoint</td><td>~307 kr/md</td><td>~3,2 år</td></tr>
+          <tr><td>1,0 procentpoint</td><td>~925 kr/md</td><td>~1,1 år</td></tr>
+          <tr><td>1,5 procentpoint</td><td>~1.527 kr/md</td><td>~8 måneder</td></tr>
+          <tr><td>2,0 procentpoint</td><td>~2.112 kr/md</td><td>~6 måneder</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cv-tablenote">Illustrative tal beregnet med værktøjets forenklede model. De tager ikke højde for skat, rentefradrag, differensrente eller præcis kursskæring, og de er ikke et tilbud. Dine faktiske tal afhænger af de aktuelle kurser hos dit realkreditinstitut.</p>
+
+    <h3>Større lån gør et lille rentefald mere værd</h3>
+    <p>Den samme rentebevægelse batter mere, jo større dit lån er, fordi besparelsen regnes af hele restgælden. Det er en af grundene til, at et lille rentefald sjældent kan betale sig på et mindre lån, mens det samme fald kan være rigeligt på et stort. Tallene nedenfor bruger de samme antagelser som ovenfor.</p>
+    <div class="table-card">
+      <table class="matrix">
+        <thead><tr><th>Rentefald</th><th>Restgæld 1 mio.</th><th>Restgæld 2 mio.</th><th>Restgæld 3 mio.</th></tr></thead>
+        <tbody>
+          <tr><td>0,5 procentpoint</td><td>~118 kr/md</td><td>~307 kr/md</td><td>~497 kr/md</td></tr>
+          <tr><td>1,0 procentpoint</td><td>~429 kr/md</td><td>~925 kr/md</td><td>~1.421 kr/md</td></tr>
+          <tr><td>1,5 procentpoint</td><td>~731 kr/md</td><td>~1.527 kr/md</td><td>~2.322 kr/md</td></tr>
+          <tr><td>2,0 procentpoint</td><td>~1.026 kr/md</td><td>~2.112 kr/md</td><td>~3.199 kr/md</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cv-tablenote">Illustrative tal. Prøv dine egne tal i beregneren ovenfor — den viser din personlige besparelse og break-even ("tjent hjem efter") ud fra netop din restgæld, rente og restløbetid.</p>
+
+    <h3>Tre ting, tabellerne ikke fanger</h3>
+    <ul>
+      <li><strong>Om en lavere kupon overhovedet findes.</strong> Du kan kun nedkonvertere til en lavere rente, hvis markedet reelt tilbyder en billigere obligationsserie. Er renten kun faldet lidt, er springet måske ikke tilgængeligt endnu.</li>
+      <li><strong>Hvor længe du bliver i lånet.</strong> Sælger du boligen kort efter, får du ikke glæde af mange års besparelse. Jo længere horisont, jo bedre giver en omlægning typisk mening.</li>
+      <li><strong>At restgælden vokser lidt.</strong> Fordi det nye lån ofte optages til en kurs under 100, og omkostningerne lægges oveni, bliver din restgæld en smule større. Se derfor ikke kun på den månedlige ydelse, men også på restgælden over hele løbetiden.</li>
+    </ul>
+    <p>Kort sagt: rentefaldet afgør, <em>hvor meget</em> du sparer, men din horisont og markedets faktiske kurser afgør, <em>om</em> det kan betale sig. Beregneren giver dig et konkret udgangspunkt, så du kan stille dit realkreditinstitut de rigtige spørgsmål.</p>
+  </article>
+
   <section class="inline-cta" id="sammenlign" aria-label="Næste skridt">
     <h2>Klar til at se, hvad andre banker kan tilbyde?</h2>
     <p>Når du har et overblik over din omlægning, kan du gratis og uforpligtende sammenligne boliglån fra flere banker hos vores partner.</p>
@@ -214,6 +262,8 @@
     <details class="q"><summary>Hvorfor skal jeg selv indtaste kurserne?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Kurserne på realkreditobligationer ændrer sig hver dag og afhænger af markedet. Et gratis værktøj kan ikke vise dine faktiske kurser i realtid. Du kan få de aktuelle kurser hos dit realkreditinstitut eller din bank og indtaste dem her for et mere retvisende billede.</div></details>
     <details class="q"><summary>Er resultatet et tilbud?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Nej. Tallene er vejledende og illustrative og er ikke et tilbud eller en garanti. De skal hjælpe dig med at forstå mekanikken, før du taler med din bank eller dit realkreditinstitut, som kan give dig en konkret beregning.</div></details>
     <details class="q"><summary>Hvad er en kuponrente?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Kuponrenten er renten på den obligation, der ligger bag dit realkreditlån. Det er den, du bruger, når du sammenligner dit nuværende lån med et muligt nyt lån. Den er ikke det samme som din samlede pris, fordi bidragssats og kurser også spiller ind.</div></details>
+    <details class="q"><summary>Hvor meget skal renten falde, før nedkonvertering betaler sig?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Der findes ikke ét fast tal, men en udbredt tommelfingerregel er omkring 1,5 procentpoint. Selve omkostningerne henter du typisk hjem på under et par år, så det afgørende er mere, om en markant lavere kuponrente overhovedet er tilgængelig i markedet, og hvor længe du bliver i lånet. Jo større din restgæld er, jo mindre rentefald skal der til, før det batter. Prøv dine egne tal i beregneren for at se din personlige break-even.</div></details>
+    <details class="q"><summary>Hvor længe skal jeg blive i lånet, før det kan betale sig?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Beregneren viser, hvornår omkostningerne er tjent hjem via den lavere ydelse — ofte inden for et par år ved et fornuftigt rentefald. Bliver du i lånet længere end det, er resten besparelse. Planlægger du at sælge boligen kort efter en omlægning, kan gevinsten omvendt blive lille. Tidshorisonten er derfor mindst lige så vigtig som selve rentefaldet.</div></details>
     <details class="q"><summary>Er det her rådgivning?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Nej. Beregneren og guiderne på Kredithjørnet er generel information. Det er ikke personlig rådgivning, og Kredithjørnet er ikke boligkreditformidler. Når du skal beslutte dig, bør du få en konkret beregning hos din bank eller dit realkreditinstitut.</div></details>
   </section>
 
@@ -356,11 +406,25 @@ function calc(){
     document.getElementById('rBreakeven').textContent=renteforskel.toFixed(1).replace('.',',')+' pct.point';
   }
   verdict.className='cv-verdict';var msgs=[];
-  if(renteforskel<1.5){verdict.classList.add('is-warn');
-    msgs.push('Forskellen i kuponrente er under ca. <strong>1,5 procentpoint</strong>. Som tommelfingerregel er det ofte for lille til, at en omlægning kan betale sig efter omkostninger.');}
-  else{verdict.classList.add('is-good');
-    msgs.push('Forskellen i kuponrente er omkring <strong>'+renteforskel.toFixed(1).replace('.',',')+' procentpoint</strong> — stort nok til, at det typisk er værd at regne nærmere på.');}
-  if(restgaeld<500000){msgs.push('Bemærk: ved mindre lån kan omkostningerne nemt æde gevinsten.');}
+  if(mode==='ned'){
+    var rentefald=kuponG-kuponN;
+    if(ydDiff>0){
+      verdict.classList.add('is-good');
+      var maanederBE=omkost/ydDiff, pbTxt=(maanederBE/12)<1?Math.round(maanederBE)+' måneder':(maanederBE/12).toFixed(1).replace('.',',')+' år';
+      msgs.push('Med et rentefald på <strong>'+rentefald.toFixed(1).replace('.',',')+' procentpoint</strong> falder din ydelse ca. <strong>'+kr(ydDiff)+'/md</strong>, og omkostningerne er tjent hjem efter <strong>'+pbTxt+'</strong>. Bliver du længere i lånet end det, er resten besparelse.');
+      if(rentefald>0&&rentefald<1.5){msgs.push('En udbredt tommelfingerregel er, at renten skal være faldet ~1,5 procentpoint, før en omlægning for alvor er værd at overveje — ikke for at tjene gebyrerne hjem, men fordi en markant lavere kupon sjældent er tilgængelig ved mindre fald.');}
+    }else{
+      verdict.classList.add('is-warn');
+      msgs.push('Med dine tal falder ydelsen ikke — den nye kuponrente skal være lavere end den nuværende, før en nedkonvertering sparer dig penge på ydelsen.');
+    }
+    if(restgaeld<500000){msgs.push('Ved mindre lån kan omkostningerne nemt æde gevinsten, så et lille rentefald er sjældent nok.');}
+  }else{
+    if(renteforskel<1.5){verdict.classList.add('is-warn');
+      msgs.push('Forskellen i kuponrente er under ca. <strong>1,5 procentpoint</strong>. Som tommelfingerregel er det ofte for lille til, at en omlægning kan betale sig efter omkostninger.');}
+    else{verdict.classList.add('is-good');
+      msgs.push('Forskellen i kuponrente er omkring <strong>'+renteforskel.toFixed(1).replace('.',',')+' procentpoint</strong> — stort nok til, at det typisk er værd at regne nærmere på.');}
+    if(restgaeld<500000){msgs.push('Bemærk: ved mindre lån kan omkostningerne nemt æde gevinsten.');}
+  }
   vText.innerHTML=msgs.join(' ')+' <em>Dette er en grov rettesnor, ikke en anbefaling.</em>';
 }
 document.querySelectorAll('.cv-grid input').forEach(function(el){el.addEventListener('input',calc);});
