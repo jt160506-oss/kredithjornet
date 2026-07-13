@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Om Kredithjørnet — uafhængig guide til boligfinansiering | Kredithjørnet</title>
+<meta name="description" content="Om Kredithjørnet: hvem står bag, hvorfor siden findes, hvordan vi tjener penge, og hvad vi ikke gør. Uafhængig dansk guide til boligfinansiering — ikke en bank eller rådgiver.">
+<link rel="canonical" href="https://kredithjornet.dk/om/">
+<meta property="og:title" content="Om Kredithjørnet — uafhængig guide til boligfinansiering">
+<meta property="og:description" content="Hvem står bag Kredithjørnet, hvorfor siden findes, og hvordan vi tjener penge — i fuld åbenhed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kredithjornet.dk/om/">
+<meta property="og:locale" content="da_DK">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+[{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Forside","item": "https://kredithjornet.dk/"},{"@type": "ListItem","position": 2,"name": "Om siden","item": "https://kredithjornet.dk/om/"}]},{"@context": "https://schema.org","@type": "WebPage","name": "En uafhængig guide til boligfinansiering — skrevet til mennesker","url": "https://kredithjornet.dk/om/","description": "Om Kredithjørnet: hvem står bag, hvorfor siden findes, hvordan vi tjener penge, og hvad vi ikke gør. Uafhængig dansk guide til boligfinansiering — ikke en bank eller rådgiver.","inLanguage": "da-DK","publisher": {"@type": "Organization","name": "Kredithjørnet","url": "https://kredithjornet.dk/","logo": {"@type": "ImageObject","url": "https://kredithjornet.dk/favicon.svg"}},"isPartOf": {"@type": "WebSite","name": "Kredithjørnet","url": "https://kredithjornet.dk/"}}]
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Kredithjørnet forside">
+      <span class="brand-mark" aria-hidden="true"><img src="/favicon.svg?v=2" alt=""></span>
+      Kredithjørnet
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Åbn menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <nav class="nav-pill" aria-label="Primær navigation">
+      <a href="/boliglaan-selvstaendig/">Selvstændig</a>
+      <a href="/skifte-bank-boliglaan/">Skift bank</a>
+      <a href="/omlaegge-realkreditlaan/">Omlægning</a>
+      <span class="nav-drop"><a href="/boliglaan-beregner/">Beregner<svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a><span class="nav-submenu"><a href="/boliglaan-beregner/">Boliglånsberegner</a><a href="/omlaegge-realkreditlaan/beregner/">Konverteringsberegner</a></span></span>
+      <a href="/om/" class="active">Om</a>
+    </nav>
+    <div class="header-cta">
+      <span class="header-note">Gratis · uden login</span>
+      <a class="btn btn-primary" href="/boliglaan-beregner/">Prøv beregneren</a>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil navigation">
+      <a href="/boliglaan-selvstaendig/">Selvstændig</a>
+      <a href="/skifte-bank-boliglaan/">Skift bank</a>
+      <a href="/omlaegge-realkreditlaan/">Omlægning</a>
+      <a href="/boliglaan-beregner/">Boliglånsberegner</a>
+      <a href="/omlaegge-realkreditlaan/beregner/">Konverteringsberegner</a>
+      <a href="/om/">Om</a>
+      <a href="/kontakt/">Kontakt</a>
+      <a class="mobile-menu-cta" href="/boliglaan-beregner/">Prøv beregneren</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="article-hero">
+  <div class="article-wrap">
+    <nav class="breadcrumb" aria-label="Brødkrumme">
+      <a href="/">Forside</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <span>Om siden</span>
+    </nav>
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Om Kredithjørnet</span>
+    <h1>En uafhængig guide til boligfinansiering — <span class="accent">skrevet til mennesker</span></h1>
+    <p class="lede">Kredithjørnet hjælper dig med at forstå dine muligheder, før du taler med banken. Vi er ikke en bank, en mægler eller en rådgiver — vi forklarer, så du selv kan træffe gode valg. Her kan du læse, hvem vi er, og hvordan vi arbejder.</p>
+  </div>
+</section>
+
+<div class="article-wrap article-body">
+
+  <article class="prose">
+    <h2>Hvem står bag?</h2>
+    <p>Kredithjørnet drives af Jakob, en uafhængig udgiver fra Silkeborg. Siden er et selvstændigt indholdsprojekt — ikke knyttet til en bank, et realkreditinstitut eller en finansiel virksomhed. Indholdet skrives ud fra offentligt tilgængelig viden om boligfinansiering, kombineret med en redaktionel ambition om at forklare tingene i et sprog, almindelige mennesker kan bruge.</p>
+
+    <h2>Hvorfor findes Kredithjørnet?</h2>
+    <p>De store sammenligningssider og bankerne dækker de brede emner godt nok. Men der er mange situationer, hvor banken bliver besværlig, og hvor det er svært at finde rolig, forståelig information: når du er <a href="/boliglaan-selvstaendig/">selvstændig</a> eller <a href="/boliglaan-selvstaendig/freelancer/">freelancer</a>, når du vil <a href="/skifte-bank-boliglaan/">skifte bank</a> med dit boliglån, eller når du overvejer at <a href="/omlaegge-realkreditlaan/">omlægge</a>. Kredithjørnet er bygget til netop de situationer.</p>
+
+    <h2>Hvordan tjener vi penge?</h2>
+    <p>Kredithjørnet er gratis at bruge. Vi tjener penge på affiliate-provision: når du klikker videre til en samarbejdspartner og fx beder om at sammenligne lån, kan vi modtage et beløb. Det koster ikke ekstra for dig, og det påvirker ikke, hvad du betaler hos partneren. Vi er åbne om det — læs mere i vores <a href="/affiliate-disclosure/">affiliate-disclosure</a>.</p>
+
+    <h2>Hvad gør vi ikke?</h2>
+    <ul>
+      <li>Vi giver ikke personlig finansiel rådgivning.</li>
+      <li>Vi er ikke boligkreditformidler og formidler ikke selv lån.</li>
+      <li>Vi siger ikke, at ét bestemt lån er "bedst" for netop dig.</li>
+      <li>Vi lover ikke laveste rente, sikker besparelse eller garanteret godkendelse.</li>
+      <li>Vi indsamler ikke følsomme økonomiske oplysninger om dig.</li>
+    </ul>
+
+    <h2>Sådan laver vi indhold</h2>
+    <p>Vi skriver originale guides med konkrete forklaringer, tjeklister og illustrative eksempler. Tal i kroner er altid markeret som eksempler — ikke tilbud. Vi forsøger at forklare begreber frem for at gemme dem bag jargon, og vi opdaterer guides, når regler eller forhold ændrer sig. Hver guide har en dato for, hvornår den sidst er opdateret.</p>
+
+    <h2>En vigtig understregning</h2>
+    <p>Information på Kredithjørnet er generel og kan ikke erstatte en konkret vurdering hos din egen bank, dit realkreditinstitut eller en professionel rådgiver. Brug os til at blive klogere og bedre forberedt — og tag den endelige beslutning sammen med dem, der kender din fulde økonomi.</p>
+
+    <h2>Kontakt</h2>
+    <p>Har du spørgsmål, rettelser eller forslag til emner, vi bør dække, hører vi gerne fra dig. Du finder vores kontaktoplysninger på <a href="/kontakt/">kontaktsiden</a>.</p>
+  </article>
+
+  <nav class="related" aria-label="Relaterede sider">
+    <h2>Læs mere</h2>
+    <div class="related-grid">
+      <a href="/affiliate-disclosure/">Affiliate-disclosure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/privatlivspolitik/">Privatlivspolitik <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/kontakt/">Kontakt <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/boliglaan-selvstaendig/">Boliglån som selvstændig <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/boliglaan-beregner/">Boliglånsberegner <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/sitemap/">Oversigt over alle sider <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+  </nav>
+
+  <div class="disclaimer">
+    <p><strong>Generel information.</strong> Kredithjørnet yder ikke personlig finansiel rådgivning og er ikke boligkreditformidler. Vi skriver generelle guides og kan modtage provision, hvis du går videre via links til samarbejdspartnere — det koster ikke ekstra for dig.</p>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer" aria-label="Sidefod">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Kredithjørnet forside">
+          <span class="brand-mark" aria-hidden="true"><img src="/favicon.svg?v=2" alt=""></span>
+          Kredithjørnet
+        </a>
+        <p>Uafhængig dansk guide til boligfinansiering. Vi hjælper dig med at forstå dine muligheder i de situationer, banken ofte gør besværlige — og sender dig først videre, når du selv er klar.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Sidekort">
+        <div class="fcol"><h5>Selvstændig &amp; freelancer</h5><ul>
+          <li><a href="/boliglaan-selvstaendig/">Boliglån som selvstændig</a></li>
+          <li><a href="/boliglaan-selvstaendig/freelancer/">Boliglån freelancer</a></li>
+          <li><a href="/boliglaan-selvstaendig/dokumentation/">Dokumentation til banken</a></li>
+          <li><a href="/boliglaan-selvstaendig/nyt-firma/">Boliglån nyt firma</a></li>
+          <li><a href="/boliglaan-selvstaendig/svingende-indkomst/">Svingende indkomst</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Skift bank</h5><ul>
+          <li><a href="/skifte-bank-boliglaan/">Skifte bank med boliglån</a></li>
+          <li><a href="/skifte-bank-boliglaan/omkostninger/">Hvad koster det at skifte bank</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Realkredit &amp; omlægning</h5><ul>
+          <li><a href="/omlaegge-realkreditlaan/">Omlægge realkreditlån</a></li>
+          <li><a href="/hvad-er-realkreditlaan/">Hvad er realkreditlån</a></li>
+          <li><a href="/bidragssats/">Bidragssats</a></li>
+          <li><a href="/omlaegge-realkreditlaan/nedkonvertering/">Nedkonvertering</a></li>
+          <li><a href="/omlaegge-realkreditlaan/opkonvertering/">Opkonvertering</a></li>
+          <li><a href="/omlaegge-realkreditlaan/beregner/">Konverteringsberegner</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Værktøjer &amp; budget</h5><ul>
+          <li><a href="/boliglaan-beregner/">Boliglånsberegner</a></li>
+          <li><a href="/raadighedsbeloeb-boliglaan/">Rådighedsbeløb</a></li>
+          <li><a href="/tjekliste-bankmoede-boliglaan/">Tjekliste til bankmøde</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Om Kredithjørnet</h5><ul>
+          <li><a href="/om/">Om siden</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/privatlivspolitik/">Privatlivspolitik</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate-disclosure</a></li>
+          <li><a href="/sitemap/">Sitemap</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer"><strong>Denne side er uafhængig og finansieret via affiliate-provision fra samarbejdspartnere.</strong> Kredithjørnet yder ikke personlig finansiel rådgivning og er ikke boligkreditformidler — vi skriver generelle guides og kan modtage provision, hvis du går videre via links til samarbejdspartnere. Det koster ikke ekstra for dig.</p>
+      <div class="footer-meta"><span>© 2026 Kredithjørnet</span><span>Silkeborg, Danmark</span><span>kredithjornet.dk</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggles = document.querySelectorAll('.menu-toggle');
+  toggles.forEach(function(toggle){
+    var menu = document.getElementById(toggle.getAttribute('aria-controls'));
+    if(!menu) return;
+    function setOpen(open){
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', open);
+    }
+    toggle.addEventListener('click', function(){
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){ setOpen(false); });
+    });
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape') setOpen(false);
+    });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "03c361d9b6c24b2f8334faebb42b9b9c"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

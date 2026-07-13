@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kredithjornet.dk/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/freelancer/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/dokumentation/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/nyt-firma/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/freelancer/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/dokumentation/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/nyt-firma/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/svingende-indkomst/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/enkeltmandsvirksomhed/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/selskab/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/frivaerdi/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kredithjornet.dk/skifte-bank-boliglaan/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://kredithjornet.dk/skifte-bank-boliglaan/omkostninger/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -13,13 +17,12 @@
   <url><loc>https://kredithjornet.dk/raadighedsbeloeb-boliglaan/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kredithjornet.dk/boliglaan-beregner/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://kredithjornet.dk/tjekliste-bankmoede-boliglaan/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/nedkonvertering/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/opkonvertering/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kredithjornet.dk/om/</loc><lastmod>2026-07-03</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://kredithjornet.dk/kontakt/</loc><lastmod>2026-07-03</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://kredithjornet.dk/privatlivspolitik/</loc><lastmod>2026-07-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://kredithjornet.dk/affiliate-disclosure/</loc><lastmod>2026-07-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://kredithjornet.dk/sitemap/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://kredithjornet.dk/boliglaan-selvstaendig/svingende-indkomst/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/nedkonvertering/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kredithjornet.dk/omlaegge-realkreditlaan/opkonvertering/</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kredithjornet.dk/sitemap/</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
 </urlset>

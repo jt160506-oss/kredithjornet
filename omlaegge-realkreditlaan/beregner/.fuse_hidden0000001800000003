@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konverteringsberegner — nedkonvertering og opkonvertering | Kredithjørnet</title>
+<meta name="description" content="Vejledende beregner til nedkonvertering og opkonvertering af realkreditlån. Se ændring i ydelse, restgæld og kursgevinst — og hvornår et rentefald begynder at betale sig. Uden bankjargon.">
+<link rel="canonical" href="https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/">
+<meta property="og:title" content="Konverteringsberegner — nedkonvertering og opkonvertering | Kredithjørnet">
+<meta property="og:description" content="Regn vejledende på din omlægning: ydelse, restgæld, kursgevinst — og hvornår rentefaldet betaler sig.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/">
+<meta property="og:locale" content="da_DK">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+/* Konverteringsberegner — scoped widget (cv-) så intet kolliderer med style.css */
+.cv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin:8px 0 8px}
+.cv-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-soft)}
+.cv-pad{padding:26px 28px}
+.cv-card h3{margin:0 0 3px;font-size:21px}
+.cv-sub{font-size:14px;color:var(--muted);margin:0 0 18px}
+.cv-modes{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;background:var(--paper);border:1px solid var(--border);border-radius:14px;margin-bottom:20px}
+.cv-mode{appearance:none;border:1px solid transparent;background:transparent;font-family:var(--sans);font-weight:700;font-size:14px;color:var(--text-2);padding:11px 10px;border-radius:10px;cursor:pointer;line-height:1.3;transition:all .15s ease}
+.cv-mode small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:2px}
+.cv-mode.is-active{background:var(--white);color:var(--ink);border-color:var(--border);box-shadow:0 6px 18px -12px rgba(8,26,51,.4)}
+.cv-mode.is-active small{color:var(--green-2)}
+.cv-field{margin-bottom:15px}
+.cv-field label{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px}
+.cv-field .cv-hint{font-weight:500;color:var(--muted);font-size:12px}
+.cv-irow{position:relative;display:flex;align-items:center}
+.cv-irow input{width:100%;font-family:var(--sans);font-size:16px;font-weight:600;color:var(--ink);padding:12px 46px 12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--paper-2);transition:border-color .15s ease,box-shadow .15s ease}
+.cv-irow input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(24,199,137,.14)}
+.cv-irow .cv-unit{position:absolute;right:14px;font-size:14px;font-weight:600;color:var(--muted);pointer-events:none}
+.cv-field-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cv-only{display:none}
+.cv-adv{margin-top:4px;border-top:1px dashed var(--border);padding-top:14px}
+.cv-adv summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--green-2);list-style:none}
+.cv-adv summary::-webkit-details-marker{display:none}
+.cv-adv summary::before{content:"\25BE ";font-weight:800}
+.cv-adv[open] summary::before{content:"\25B4 "}
+.cv-res{background:linear-gradient(160deg,#0A203F,#081A33);color:#fff;border:none;border-radius:var(--radius);box-shadow:var(--shadow-soft)}
+.cv-res .cv-pad{padding:28px 30px}
+.cv-res h3{color:#fff;font-size:19px}
+.cv-res .cv-sub{color:rgba(255,255,255,.6)}
+.cv-head{margin:6px 0 20px}
+.cv-head .cv-hl{font-size:13px;color:rgba(255,255,255,.7);font-weight:600}
+.cv-head .cv-hv{font-family:var(--serif);font-size:36px;font-weight:700;letter-spacing:-.02em;margin-top:2px;line-height:1.1}
+.cv-head .cv-hv.is-pos{color:var(--green)}
+.cv-head .cv-hv.is-neg{color:var(--gold)}
+.cv-grid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden}
+.cv-cell{background:#0A203F;padding:14px 16px}
+.cv-cell .cv-k{font-size:12px;color:rgba(255,255,255,.62);font-weight:600}
+.cv-cell .cv-v{font-size:18px;font-weight:700;color:#fff;margin-top:3px;font-family:var(--serif);letter-spacing:-.01em}
+.cv-cell .cv-v.is-green{color:var(--green)}
+.cv-verdict{margin-top:18px;display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.cv-verdict .cv-dot{flex:0 0 auto;width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--muted)}
+.cv-verdict.is-good .cv-dot{background:var(--green)}
+.cv-verdict.is-warn .cv-dot{background:var(--gold)}
+.cv-verdict p{margin:0;color:rgba(255,255,255,.86);font-size:14px}
+.cv-verdict strong{color:#fff}
+.cv-mininote{font-size:12px;color:rgba(255,255,255,.55);margin:14px 0 0}
+.cv-tablenote{font-size:13px;color:var(--muted);margin:10px 2px 0;line-height:1.55}
+@media(max-width:860px){.cv-grid{grid-template-columns:1fr}.cv-field-2{grid-template-columns:1fr}.cv-grid2{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+[{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Forside","item": "https://kredithjornet.dk/"},{"@type": "ListItem","position": 2,"name": "Omlægge realkreditlån","item": "https://kredithjornet.dk/omlaegge-realkreditlaan/"},{"@type": "ListItem","position": 3,"name": "Konverteringsberegner","item": "https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/"}]},{"@context": "https://schema.org","@type": "WebApplication","name": "Konverteringsberegner: regn på din omlægning","url": "https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/","applicationCategory": "FinanceApplication","operatingSystem": "Web","browserRequirements": "Requires JavaScript","inLanguage": "da-DK","description": "Vejledende beregner til nedkonvertering og opkonvertering af realkreditlån. Se ændring i ydelse, restgæld og kursgevinst — og hvornår et rentefald begynder at betale sig. Uden bankjargon.","publisher": {"@type": "Organization","name": "Kredithjørnet","url": "https://kredithjornet.dk/","logo": {"@type": "ImageObject","url": "https://kredithjornet.dk/favicon.svg"}},"offers": {"@type": "Offer","price": "0","priceCurrency": "DKK"},"isAccessibleForFree": true},{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Hvorfor skal jeg selv indtaste kurserne?","acceptedAnswer": {"@type": "Answer","text": "Kurserne på realkreditobligationer ændrer sig hver dag og afhænger af markedet. Et gratis værktøj kan ikke vise dine faktiske kurser i realtid. Du kan få de aktuelle kurser hos dit realkreditinstitut eller din bank og indtaste dem her for et mere retvisende billede."}},{"@type": "Question","name": "Er resultatet et tilbud?","acceptedAnswer": {"@type": "Answer","text": "Nej. Tallene er vejledende og illustrative og er ikke et tilbud eller en garanti. De skal hjælpe dig med at forstå mekanikken, før du taler med din bank eller dit realkreditinstitut, som kan give dig en konkret beregning."}},{"@type": "Question","name": "Hvad er en kuponrente?","acceptedAnswer": {"@type": "Answer","text": "Kuponrenten er renten på den obligation, der ligger bag dit realkreditlån. Det er den, du bruger, når du sammenligner dit nuværende lån med et muligt nyt lån. Den er ikke det samme som din samlede pris, fordi bidragssats og kurser også spiller ind."}},{"@type": "Question","name": "Hvor meget skal renten falde, før nedkonvertering betaler sig?","acceptedAnswer": {"@type": "Answer","text": "Der findes ikke ét fast tal, men en udbredt tommelfingerregel er omkring 1,5 procentpoint. Selve omkostningerne henter du typisk hjem på under et par år, så det afgørende er mere, om en markant lavere kuponrente overhovedet er tilgængelig i markedet, og hvor længe du bliver i lånet. Jo større din restgæld er, jo mindre rentefald skal der til, før det batter. Prøv dine egne tal i beregneren for at se din personlige break-even."}},{"@type": "Question","name": "Hvor længe skal jeg blive i lånet, før det kan betale sig?","acceptedAnswer": {"@type": "Answer","text": "Beregneren viser, hvornår omkostningerne er tjent hjem via den lavere ydelse — ofte inden for et par år ved et fornuftigt rentefald. Bliver du i lånet længere end det, er resten besparelse. Planlægger du at sælge boligen kort efter en omlægning, kan gevinsten omvendt blive lille. Tidshorisonten er derfor mindst lige så vigtig som selve rentefaldet."}},{"@type": "Question","name": "Er det her rådgivning?","acceptedAnswer": {"@type": "Answer","text": "Nej. Beregneren og guiderne på Kredithjørnet er generel information. Det er ikke personlig rådgivning, og Kredithjørnet er ikke boligkreditformidler. Når du skal beslutte dig, bør du få en konkret beregning hos din bank eller dit realkreditinstitut."}}]}]
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Kredithjørnet forside">
+      <span class="brand-mark" aria-hidden="true"><img src="/favicon.svg?v=2" alt=""></span>
+      Kredithjørnet
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Åbn menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <nav class="nav-pill" aria-label="Primær navigation">
+      <a href="/boliglaan-selvstaendig/">Selvstændig</a>
+      <a href="/skifte-bank-boliglaan/">Skift bank</a>
+      <a href="/omlaegge-realkreditlaan/" class="active">Omlægning</a>
+      <span class="nav-drop"><a href="/boliglaan-beregner/">Beregner<svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a><span class="nav-submenu"><a href="/boliglaan-beregner/">Boliglånsberegner</a><a href="/omlaegge-realkreditlaan/beregner/">Konverteringsberegner</a></span></span>
+      <a href="/om/">Om</a>
+    </nav>
+    <div class="header-cta">
+      <span class="header-note">Gratis · uden login</span>
+      <a class="btn btn-primary" href="#sammenlign">Sammenlign lån</a>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil navigation">
+      <a href="/boliglaan-selvstaendig/">Selvstændig</a>
+      <a href="/skifte-bank-boliglaan/">Skift bank</a>
+      <a href="/omlaegge-realkreditlaan/">Omlægning</a>
+      <a href="/boliglaan-beregner/">Boliglånsberegner</a>
+      <a href="/omlaegge-realkreditlaan/beregner/">Konverteringsberegner</a>
+      <a href="/om/">Om</a>
+      <a href="/kontakt/">Kontakt</a>
+      <a class="mobile-menu-cta" href="/boliglaan-beregner/">Prøv beregneren</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="article-hero">
+  <div class="article-wrap">
+    <nav class="breadcrumb" aria-label="Brødkrumme">
+      <a href="/">Forside</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="/omlaegge-realkreditlaan/">Omlægge realkreditlån</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <span>Konverteringsberegner</span>
+    </nav>
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Vejledende værktøj</span>
+    <h1>Konverteringsberegner: regn på din <span class="accent">omlægning</span></h1>
+    <p class="lede">Få et hurtigt, vejledende overblik over, hvad en omlægning betyder for din ydelse, din restgæld og en eventuel kursgevinst — uden bankjargon, og uden login.</p>
+    <p class="byline">Vejledende værktøj · Senest opdateret juli 2026</p>
+  </div>
+</section>
+
+<div class="article-wrap article-body">
+
+<div class="cv-grid">
+  <div class="cv-card"><div class="cv-pad">
+    <h3>Dine tal</h3>
+    <p class="cv-sub">Indtast dit nuværende lån og det lån, du overvejer. Beregningen opdateres automatisk.</p>
+    <div class="cv-modes" role="tablist" aria-label="Type af omlægning">
+      <button class="cv-mode is-active" id="m-ned" role="tab" aria-selected="true" onclick="setMode('ned')">Nedkonvertering<small>Renten er faldet → lavere ydelse</small></button>
+      <button class="cv-mode" id="m-op" role="tab" aria-selected="false" onclick="setMode('op')">Opkonvertering<small>Renten er steget → mindre restgæld</small></button>
+    </div>
+    <div class="cv-field"><label for="restgaeld">Restgæld på nuværende lån</label>
+      <div class="cv-irow"><input type="number" id="restgaeld" value="2000000" min="0" step="10000" inputmode="numeric"><span class="cv-unit">kr</span></div></div>
+    <div class="cv-field-2">
+      <div class="cv-field"><label for="kuponGammel">Nuværende kuponrente</label>
+        <div class="cv-irow"><input type="number" id="kuponGammel" value="5" min="0" step="0.5" inputmode="decimal"><span class="cv-unit">%</span></div></div>
+      <div class="cv-field"><label for="kuponNy" id="kuponNyLabel">Ny (lavere) kuponrente</label>
+        <div class="cv-irow"><input type="number" id="kuponNy" value="3" min="0" step="0.5" inputmode="decimal"><span class="cv-unit">%</span></div></div>
+    </div>
+    <div class="cv-field"><label for="loebetid">Restløbetid <span class="cv-hint">(år tilbage)</span></label>
+      <div class="cv-irow"><input type="number" id="loebetid" value="27" min="1" max="40" step="1" inputmode="numeric"><span class="cv-unit">år</span></div></div>
+    <div class="cv-field cv-only" id="row-indfri"><label for="indfriKurs">Indfrielseskurs på nuværende lån <span class="cv-hint">(den lave kurs du kan indfri til)</span></label>
+      <div class="cv-irow"><input type="number" id="indfriKurs" value="88" min="40" max="100" step="0.5" inputmode="decimal"><span class="cv-unit">kurs</span></div></div>
+    <details class="cv-adv"><summary>Avancerede antagelser (kurs og omkostninger)</summary>
+      <div style="margin-top:14px">
+        <div class="cv-field-2">
+          <div class="cv-field"><label for="kursNy">Kurs på nyt lån</label>
+            <div class="cv-irow"><input type="number" id="kursNy" value="98" min="40" max="100" step="0.5" inputmode="decimal"><span class="cv-unit">kurs</span></div></div>
+          <div class="cv-field"><label for="bidrag">Bidragssats</label>
+            <div class="cv-irow"><input type="number" id="bidrag" value="0.7" min="0" step="0.05" inputmode="decimal"><span class="cv-unit">%</span></div></div>
+        </div>
+        <div class="cv-field"><label for="omkost">Anslåede samlede omkostninger <span class="cv-hint">(gebyrer, kurtage, kursskæring, evt. tinglysning)</span></label>
+          <div class="cv-irow"><input type="number" id="omkost" value="12000" min="0" step="1000" inputmode="numeric"><span class="cv-unit">kr</span></div></div>
+      </div>
+    </details>
+  </div></div>
+
+  <div class="cv-card cv-res" aria-live="polite"><div class="cv-pad">
+    <h3 id="resTitle">Dit vejledende resultat</h3>
+    <p class="cv-sub" id="resSub">Ved nedkonvertering ser vi især på, hvor meget din ydelse falder.</p>
+    <div class="cv-head"><div class="cv-hl" id="headLabel">Ændring i månedlig ydelse</div><div class="cv-hv is-pos" id="headValue">–</div></div>
+    <div class="cv-grid2">
+      <div class="cv-cell"><div class="cv-k">Ny månedlig ydelse</div><div class="cv-v" id="rNyYdelse">–</div></div>
+      <div class="cv-cell"><div class="cv-k">Nuværende ydelse</div><div class="cv-v" id="rGammelYdelse">–</div></div>
+      <div class="cv-cell"><div class="cv-k" id="kRestgaeld">Ny restgæld</div><div class="cv-v" id="rRestgaeld">–</div></div>
+      <div class="cv-cell"><div class="cv-k" id="kGevinst">Ændring i restgæld</div><div class="cv-v is-green" id="rGevinst">–</div></div>
+      <div class="cv-cell"><div class="cv-k">Samlede omkostninger</div><div class="cv-v" id="rOmkost">–</div></div>
+      <div class="cv-cell"><div class="cv-k" id="kBreakeven">Tjent hjem efter</div><div class="cv-v" id="rBreakeven">–</div></div>
+    </div>
+    <div class="cv-verdict" id="verdict"><span class="cv-dot"></span><p id="verdictText">Indtast dine tal for at se en vejledende vurdering.</p></div>
+    <p class="cv-mininote">Alle tal er vejledende og illustrative. Kurser ændrer sig dagligt — spørg dit realkreditinstitut om de faktiske kurser, før du beslutter dig.</p>
+  </div></div>
+</div>
+
+  <article class="prose">
+    <h2>Hvad er nedkonvertering og opkonvertering?</h2>
+    <p>At omlægge (konvertere) sit realkreditlån betyder, at det nuværende lån indfries og erstattes af et nyt. Hvilken vej der giver mening, afhænger af, om renten er faldet eller steget, siden du optog lånet. Ved <a href="/omlaegge-realkreditlaan/nedkonvertering/">nedkonvertering</a> er renten faldet, og du sigter mod en lavere ydelse. Ved <a href="/omlaegge-realkreditlaan/opkonvertering/">opkonvertering</a> er renten steget, og du kan skære toppen af din restgæld via en kursgevinst.</p>
+    <p>Som grov tommelfingerregel taler man ofte om en reel gevinst, når forskellen i kuponrente er omkring 1,5 procentpoint eller mere, og når restgælden er stor nok til, at omkostningerne ikke æder gevinsten. Derfor skal det altid regnes konkret — og det er det, beregneren hjælper dig med.</p>
+    <h2>Sådan regner beregneren — og hvad den ikke kan</h2>
+    <p>Beregneren bruger en forenklet annuitetsmodel: den beregner din årlige ydelse ud fra restgæld, rente (kupon plus bidrag) og restløbetid, og sammenligner dit nuværende lån med et nyt. Ved opkonvertering beregnes desuden en kursgevinst ud fra den indfrielseskurs, du indtaster.</p>
+    <ul>
+      <li>Modellen er <strong>vejledende</strong> og tager ikke højde for skat, rentefradrag, differensrente eller præcis kursskæring.</li>
+      <li>Kurser ændrer sig dagligt — få dem bekræftet hos dit realkreditinstitut.</li>
+      <li>En omlægning bør altid vurderes over hele løbetiden, ikke kun på den månedlige ydelse.</li>
+      <li>Beregneren afgør ikke, om du <em>bør</em> omlægge. Den giver dig et overblik, så du kan stille bedre spørgsmål.</li>
+    </ul>
+  </article>
+
+  <article class="prose" id="hvornaar-betaler-det-sig">
+    <h2>Hvornår betaler nedkonvertering sig?</h2>
+    <p>Det korte svar: en <a href="/omlaegge-realkreditlaan/nedkonvertering/">nedkonvertering</a> begynder at give mening, når renten er faldet nok til, at din nye, lavere ydelse mere end opvejer omkostningerne ved at lægge om. Det svære er, at "nok" afhænger af tre ting på én gang — hvor stort dit rentefald er, hvor stor din restgæld er, og hvor længe du bliver i lånet.</p>
+    <p>En udbredt tommelfingerregel siger, at renten skal være faldet <strong>omkring 1,5 procentpoint</strong>, før en omlægning er værd at overveje. Men reglen handler ikke om at tjene selve gebyrerne hjem — dem henter du typisk ind på under et par år. Den handler om, at du sjældent kan få en markant lavere kuponrente, medmindre markedet er flyttet et godt stykke, og at du ved en omlægning optager et nyt lån til en kurs under 100, så din restgæld vokser en smule. De reelle spørgsmål er derfor: kan du overhovedet få en lavere kupon lige nu, og bliver du i lånet længe nok?</p>
+
+    <h3>Hvad rentefaldet betyder for din besparelse</h3>
+    <p>Tabellen viser et illustrativt eksempel: et lån på 2 mio. kr. med 27 år tilbage, en nuværende kuponrente på 5 %, en bidragssats på 0,7 % og anslåede omkostninger på 12.000 kr. Jo større rentefaldet er, jo hurtigere er omkostningerne tjent hjem — men bemærk, at gebyrerne er hentet ind på ret kort tid selv ved et beskedent fald.</p>
+    <div class="table-card">
+      <table class="matrix">
+        <thead><tr><th>Rentefald (fald i kuponrente)</th><th>Månedlig besparelse</th><th>Omkostninger tjent hjem efter</th></tr></thead>
+        <tbody>
+          <tr><td>0,5 procentpoint</td><td>~307 kr/md</td><td>~3,2 år</td></tr>
+          <tr><td>1,0 procentpoint</td><td>~925 kr/md</td><td>~1,1 år</td></tr>
+          <tr><td>1,5 procentpoint</td><td>~1.527 kr/md</td><td>~8 måneder</td></tr>
+          <tr><td>2,0 procentpoint</td><td>~2.112 kr/md</td><td>~6 måneder</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cv-tablenote">Illustrative tal beregnet med værktøjets forenklede model. De tager ikke højde for skat, rentefradrag, differensrente eller præcis kursskæring, og de er ikke et tilbud. Dine faktiske tal afhænger af de aktuelle kurser hos dit realkreditinstitut.</p>
+
+    <h3>Større lån gør et lille rentefald mere værd</h3>
+    <p>Den samme rentebevægelse batter mere, jo større dit lån er, fordi besparelsen regnes af hele restgælden. Det er en af grundene til, at et lille rentefald sjældent kan betale sig på et mindre lån, mens det samme fald kan være rigeligt på et stort. Tallene nedenfor bruger de samme antagelser som ovenfor.</p>
+    <div class="table-card">
+      <table class="matrix">
+        <thead><tr><th>Rentefald</th><th>Restgæld 1 mio.</th><th>Restgæld 2 mio.</th><th>Restgæld 3 mio.</th></tr></thead>
+        <tbody>
+          <tr><td>0,5 procentpoint</td><td>~118 kr/md</td><td>~307 kr/md</td><td>~497 kr/md</td></tr>
+          <tr><td>1,0 procentpoint</td><td>~429 kr/md</td><td>~925 kr/md</td><td>~1.421 kr/md</td></tr>
+          <tr><td>1,5 procentpoint</td><td>~731 kr/md</td><td>~1.527 kr/md</td><td>~2.322 kr/md</td></tr>
+          <tr><td>2,0 procentpoint</td><td>~1.026 kr/md</td><td>~2.112 kr/md</td><td>~3.199 kr/md</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cv-tablenote">Illustrative tal. Prøv dine egne tal i beregneren ovenfor — den viser din personlige besparelse og break-even ("tjent hjem efter") ud fra netop din restgæld, rente og restløbetid.</p>
+
+    <h3>Tre ting, tabellerne ikke fanger</h3>
+    <ul>
+      <li><strong>Om en lavere kupon overhovedet findes.</strong> Du kan kun nedkonvertere til en lavere rente, hvis markedet reelt tilbyder en billigere obligationsserie. Er renten kun faldet lidt, er springet måske ikke tilgængeligt endnu.</li>
+      <li><strong>Hvor længe du bliver i lånet.</strong> Sælger du boligen kort efter, får du ikke glæde af mange års besparelse. Jo længere horisont, jo bedre giver en omlægning typisk mening.</li>
+      <li><strong>At restgælden vokser lidt.</strong> Fordi det nye lån ofte optages til en kurs under 100, og omkostningerne lægges oveni, bliver din restgæld en smule større. Se derfor ikke kun på den månedlige ydelse, men også på restgælden over hele løbetiden.</li>
+    </ul>
+    <p>Kort sagt: rentefaldet afgør, <em>hvor meget</em> du sparer, men din horisont og markedets faktiske kurser afgør, <em>om</em> det kan betale sig. Beregneren giver dig et konkret udgangspunkt, så du kan stille dit realkreditinstitut de rigtige spørgsmål.</p>
+  </article>
+
+  <section class="inline-cta" id="sammenlign" aria-label="Næste skridt">
+    <h2>Klar til at se, hvad andre banker kan tilbyde?</h2>
+    <p>Når du har et overblik over din omlægning, kan du gratis og uforpligtende sammenligne boliglån fra flere banker hos vores partner.</p>
+    <div class="row">
+      <!-- Erstat href med Adtraction-trackinglink, når Mybanker-programmet er godkendt -->
+      <a class="btn btn-primary" href="#" rel="sponsored nofollow">Sammenlign boliglån gratis
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-dark-ghost" href="/omlaegge-realkreditlaan/">Læs guiden først</a>
+    </div>
+    <p class="note">Du bliver sendt videre til Mybanker. Kredithjørnet gemmer ingen oplysninger.</p>
+  </section>
+
+  <nav class="related" aria-label="Relaterede guides">
+    <h2>Læs videre</h2>
+    <div class="related-grid">
+      <a href="/omlaegge-realkreditlaan/">Omlægge realkreditlån <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/omlaegge-realkreditlaan/nedkonvertering/">Nedkonvertering <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/omlaegge-realkreditlaan/opkonvertering/">Opkonvertering <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a href="/bidragssats/">Bidragssats forklaret <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+  </nav>
+
+  <section class="faq" aria-label="Ofte stillede spørgsmål">
+    <h2>Ofte stillede spørgsmål</h2>
+    <details class="q"><summary>Hvorfor skal jeg selv indtaste kurserne?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Kurserne på realkreditobligationer ændrer sig hver dag og afhænger af markedet. Et gratis værktøj kan ikke vise dine faktiske kurser i realtid. Du kan få de aktuelle kurser hos dit realkreditinstitut eller din bank og indtaste dem her for et mere retvisende billede.</div></details>
+    <details class="q"><summary>Er resultatet et tilbud?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Nej. Tallene er vejledende og illustrative og er ikke et tilbud eller en garanti. De skal hjælpe dig med at forstå mekanikken, før du taler med din bank eller dit realkreditinstitut, som kan give dig en konkret beregning.</div></details>
+    <details class="q"><summary>Hvad er en kuponrente?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Kuponrenten er renten på den obligation, der ligger bag dit realkreditlån. Det er den, du bruger, når du sammenligner dit nuværende lån med et muligt nyt lån. Den er ikke det samme som din samlede pris, fordi bidragssats og kurser også spiller ind.</div></details>
+    <details class="q"><summary>Hvor meget skal renten falde, før nedkonvertering betaler sig?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Der findes ikke ét fast tal, men en udbredt tommelfingerregel er omkring 1,5 procentpoint. Selve omkostningerne henter du typisk hjem på under et par år, så det afgørende er mere, om en markant lavere kuponrente overhovedet er tilgængelig i markedet, og hvor længe du bliver i lånet. Jo større din restgæld er, jo mindre rentefald skal der til, før det batter. Prøv dine egne tal i beregneren for at se din personlige break-even.</div></details>
+    <details class="q"><summary>Hvor længe skal jeg blive i lånet, før det kan betale sig?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Beregneren viser, hvornår omkostningerne er tjent hjem via den lavere ydelse — ofte inden for et par år ved et fornuftigt rentefald. Bliver du i lånet længere end det, er resten besparelse. Planlægger du at sælge boligen kort efter en omlægning, kan gevinsten omvendt blive lille. Tidshorisonten er derfor mindst lige så vigtig som selve rentefaldet.</div></details>
+    <details class="q"><summary>Er det her rådgivning?<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></summary><div class="a">Nej. Beregneren og guiderne på Kredithjørnet er generel information. Det er ikke personlig rådgivning, og Kredithjørnet er ikke boligkreditformidler. Når du skal beslutte dig, bør du få en konkret beregning hos din bank eller dit realkreditinstitut.</div></details>
+  </section>
+
+  <div class="disclaimer">
+    <p><strong>Generel information.</strong> Kredithjørnet yder ikke personlig finansiel rådgivning og er ikke boligkreditformidler. Beregneren giver et vejledende, illustrativt overblik og kan ikke erstatte en konkret beregning hos dit realkreditinstitut eller din bank. Vi kan modtage provision, hvis du går videre via links til samarbejdspartnere — det koster ikke ekstra for dig. Kurser, satser og gebyrer kan ændre sig over tid.</p>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer" aria-label="Sidefod">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Kredithjørnet forside">
+          <span class="brand-mark" aria-hidden="true"><img src="/favicon.svg?v=2" alt=""></span>
+          Kredithjørnet
+        </a>
+        <p>Uafhængig dansk guide til boligfinansiering. Vi hjælper dig med at forstå dine muligheder i de situationer, banken ofte gør besværlige — og sender dig først videre, når du selv er klar.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Sidekort">
+        <div class="fcol"><h5>Selvstændig &amp; freelancer</h5><ul>
+          <li><a href="/boliglaan-selvstaendig/">Boliglån som selvstændig</a></li>
+          <li><a href="/boliglaan-selvstaendig/freelancer/">Boliglån freelancer</a></li>
+          <li><a href="/boliglaan-selvstaendig/dokumentation/">Dokumentation til banken</a></li>
+          <li><a href="/boliglaan-selvstaendig/nyt-firma/">Boliglån nyt firma</a></li>
+          <li><a href="/boliglaan-selvstaendig/svingende-indkomst/">Svingende indkomst</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Skift bank</h5><ul>
+          <li><a href="/skifte-bank-boliglaan/">Skifte bank med boliglån</a></li>
+          <li><a href="/skifte-bank-boliglaan/omkostninger/">Hvad koster det at skifte bank</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Realkredit &amp; omlægning</h5><ul>
+          <li><a href="/omlaegge-realkreditlaan/">Omlægge realkreditlån</a></li>
+          <li><a href="/hvad-er-realkreditlaan/">Hvad er realkreditlån</a></li>
+          <li><a href="/bidragssats/">Bidragssats</a></li>
+          <li><a href="/omlaegge-realkreditlaan/nedkonvertering/">Nedkonvertering</a></li>
+          <li><a href="/omlaegge-realkreditlaan/opkonvertering/">Opkonvertering</a></li>
+          <li><a href="/omlaegge-realkreditlaan/beregner/">Konverteringsberegner</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Værktøjer &amp; budget</h5><ul>
+          <li><a href="/boliglaan-beregner/">Boliglånsberegner</a></li>
+          <li><a href="/raadighedsbeloeb-boliglaan/">Rådighedsbeløb</a></li>
+          <li><a href="/tjekliste-bankmoede-boliglaan/">Tjekliste til bankmøde</a></li>
+        </ul></div>
+        <div class="fcol"><h5>Om Kredithjørnet</h5><ul>
+          <li><a href="/om/">Om siden</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/privatlivspolitik/">Privatlivspolitik</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate-disclosure</a></li>
+          <li><a href="/sitemap/">Sitemap</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer"><strong>Denne side er uafhængig og finansieret via affiliate-provision fra samarbejdspartnere.</strong> Kredithjørnet yder ikke personlig finansiel rådgivning og er ikke boligkreditformidler — vi skriver generelle guides og kan modtage provision, hvis du går videre via links til samarbejdspartnere. Det koster ikke ekstra for dig.</p>
+      <div class="footer-meta"><span>© 2026 Kredithjørnet</span><span>Silkeborg, Danmark</span><span>kredithjornet.dk</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggles = document.querySelectorAll('.menu-toggle');
+  toggles.forEach(function(toggle){
+    var menu = document.getElementById(toggle.getAttribute('aria-controls'));
+    if(!menu) return;
+    function setOpen(open){
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', open);
+    }
+    toggle.addEventListener('click', function(){
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){ setOpen(false); });
+    });
+    document.addEventListener('keydown', function(event){
+      if(event.key === 'Escape') setOpen(false);
+    });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "03c361d9b6c24b2f8334faebb42b9b9c"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+var mode='ned';
+function setMode(m){
+  mode=m;
+  document.getElementById('m-ned').classList.toggle('is-active',m==='ned');
+  document.getElementById('m-op').classList.toggle('is-active',m==='op');
+  document.getElementById('m-ned').setAttribute('aria-selected',m==='ned');
+  document.getElementById('m-op').setAttribute('aria-selected',m==='op');
+  document.getElementById('row-indfri').style.display=(m==='op')?'block':'none';
+  if(m==='ned'){
+    document.getElementById('kuponNyLabel').textContent='Ny (lavere) kuponrente';
+    document.getElementById('resSub').textContent='Ved nedkonvertering ser vi især på, hvor meget din ydelse falder.';
+    document.getElementById('kGevinst').textContent='Ændring i restgæld';
+    document.getElementById('kBreakeven').textContent='Tjent hjem efter';
+  }else{
+    document.getElementById('kuponNyLabel').textContent='Ny (højere) kuponrente';
+    document.getElementById('resSub').textContent='Ved opkonvertering ser vi især på, hvor meget din restgæld falder.';
+    document.getElementById('kGevinst').textContent='Kursgevinst på restgæld';
+    document.getElementById('kBreakeven').textContent='Renteforskel';
+  }
+  calc();
+}
+function val(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?0:v;}
+function kr(n){return Math.round(n).toLocaleString('da-DK')+' kr';}
+function annuitet(P,r,aar){r=r/100;if(r<=0)return P/aar;return P*r/(1-Math.pow(1+r,-aar));}
+function calc(){
+  var restgaeld=val('restgaeld'),kuponG=val('kuponGammel'),kuponN=val('kuponNy'),aar=val('loebetid')||1;
+  var kursNy=val('kursNy')||100,bidrag=val('bidrag'),omkost=val('omkost'),indfriKurs=val('indfriKurs')||100;
+  var nyRestgaeld,kursgevinst=0,indfriBeloeb;
+  if(mode==='ned'){indfriBeloeb=restgaeld;nyRestgaeld=(indfriBeloeb+omkost)/(kursNy/100);}
+  else{indfriBeloeb=restgaeld*(indfriKurs/100);kursgevinst=restgaeld-indfriBeloeb;nyRestgaeld=(indfriBeloeb+omkost)/(kursNy/100);}
+  var ydG=annuitet(restgaeld,kuponG+bidrag,aar)/12, ydN=annuitet(nyRestgaeld,kuponN+bidrag,aar)/12, ydDiff=ydG-ydN;
+  document.getElementById('rNyYdelse').textContent=kr(ydN);
+  document.getElementById('rGammelYdelse').textContent=kr(ydG);
+  document.getElementById('rRestgaeld').textContent=kr(nyRestgaeld);
+  document.getElementById('rOmkost').textContent=kr(omkost);
+  var head=document.getElementById('headValue'),headLabel=document.getElementById('headLabel');
+  var verdict=document.getElementById('verdict'),vText=document.getElementById('verdictText');
+  var renteforskel=Math.abs(kuponG-kuponN);
+  if(mode==='ned'){
+    headLabel.textContent=ydDiff>=0?'Lavere månedlig ydelse':'Højere månedlig ydelse';
+    head.textContent=(ydDiff>=0?'−':'+')+kr(Math.abs(ydDiff)).replace(' kr','')+' kr/md';
+    head.className='cv-hv '+(ydDiff>=0?'is-pos':'is-neg');
+    var restDiff=nyRestgaeld-restgaeld;
+    document.getElementById('rGevinst').textContent=(restDiff>0?'+':'')+kr(restDiff);
+    document.getElementById('rGevinst').className='cv-v';
+    if(ydDiff>0){var maaneder=omkost/ydDiff,aarBE=maaneder/12;
+      document.getElementById('rBreakeven').textContent=aarBE<1?Math.round(maaneder)+' mdr':aarBE.toFixed(1).replace('.',',')+' år';}
+    else{document.getElementById('rBreakeven').textContent='Ingen besparelse';}
+  }else{
+    headLabel.textContent='Reduktion af restgæld (kursgevinst)';
+    head.textContent='−'+kr(kursgevinst).replace(' kr','')+' kr';
+    head.className='cv-hv is-pos';
+    document.getElementById('rGevinst').textContent='−'+kr(kursgevinst);
+    document.getElementById('rGevinst').className='cv-v is-green';
+    document.getElementById('rBreakeven').textContent=renteforskel.toFixed(1).replace('.',',')+' pct.point';
+  }
+  verdict.className='cv-verdict';var msgs=[];
+  if(mode==='ned'){
+    var rentefald=kuponG-kuponN;
+    if(ydDiff>0){
+      verdict.classList.add('is-good');
+      var maanederBE=omkost/ydDiff, pbTxt=(maanederBE/12)<1?Math.round(maanederBE)+' måneder':(maanederBE/12).toFixed(1).replace('.',',')+' år';
+      msgs.push('Med et rentefald på <strong>'+rentefald.toFixed(1).replace('.',',')+' procentpoint</strong> falder din ydelse ca. <strong>'+kr(ydDiff)+'/md</strong>, og omkostningerne er tjent hjem efter <strong>'+pbTxt+'</strong>. Bliver du længere i lånet end det, er resten besparelse.');
+      if(rentefald>0&&rentefald<1.5){msgs.push('En udbredt tommelfingerregel er, at renten skal være faldet ~1,5 procentpoint, før en omlægning for alvor er værd at overveje — ikke for at tjene gebyrerne hjem, men fordi en markant lavere kupon sjældent er tilgængelig ved mindre fald.');}
+    }else{
+      verdict.classList.add('is-warn');
+      msgs.push('Med dine tal falder ydelsen ikke — den nye kuponrente skal være lavere end den nuværende, før en nedkonvertering sparer dig penge på ydelsen.');
+    }
+    if(restgaeld<500000){msgs.push('Ved mindre lån kan omkostningerne nemt æde gevinsten, så et lille rentefald er sjældent nok.');}
+  }else{
+    if(renteforskel<1.5){verdict.classList.add('is-warn');
+      msgs.push('Forskellen i kuponrente er under ca. <strong>1,5 procentpoint</strong>. Som tommelfingerregel er det ofte for lille til, at en omlægning kan betale sig efter omkostninger.');}
+    else{verdict.classList.add('is-good');
+      msgs.push('Forskellen i kuponrente er omkring <strong>'+renteforskel.toFixed(1).replace('.',',')+' procentpoint</strong> — stort nok til, at det typisk er værd at regne nærmere på.');}
+    if(restgaeld<500000){msgs.push('Bemærk: ved mindre lån kan omkostningerne nemt æde gevinsten.');}
+  }
+  vText.innerHTML=msgs.join(' ')+' <em>Dette er en grov rettesnor, ikke en anbefaling.</em>';
+}
+document.querySelectorAll('.cv-grid input').forEach(function(el){el.addEventListener('input',calc);});
+setMode('ned');
+</script>
+</body>
+</html>
