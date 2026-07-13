@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux/FUSE mount-artefakter
+.fuse_hidden*
+
+# Editor/temp
+*~
+*.swp
+.idea/
+.vscode/
