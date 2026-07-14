@@ -43,41 +43,27 @@
   </div>
 </section>
 
-<figure class="editorial-illustration konvertering is-reverse" aria-labelledby="kv-title">
+<figure class="editorial-illustration ill-ratedown is-reverse" aria-labelledby="d1">
   <figcaption class="illustration-copy">
     <span class="illustration-kicker">Når renten er faldet</span>
-    <h3 id="kv-title">Nedkonvertering skifter til en lavere rente</h3>
-    <p>Er renten faldet, kan du bytte til et lån med lavere rente og dermed lavere ydelse. Regn omkostningerne med, så gevinsten reelt er der.</p>
-    <div class="illustration-points" aria-hidden="true"><span><i></i>Lavere rente</span><span><i></i>Ny kurs</span><span><i></i>Omkostninger</span></div>
+    <h3 id="d1">Nedkonvertering skifter til en lavere rente</h3>
+    <p>Er markedsrenten faldet under din nuværende, kan du lægge om til et billigere lån og sænke ydelsen. Omkostningerne skal veje op mod gevinsten over din tidshorisont.</p>
+    <div class="illustration-points" aria-hidden="true"><span><i></i>Faldende rente</span><span><i></i>Lavere ydelse</span><span><i></i>Omkostninger</span></div>
   </figcaption>
   <div class="illustration-stage">
-    <svg viewBox="0 0 560 330" role="img" aria-label="Illustration af omlægning hvor et lån byttes til nye vilkår med lavere rente">
-      <defs>
-        <linearGradient id="kv-green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42D5A0"/><stop offset="1" stop-color="#176453"/></linearGradient>
-        <filter id="kv-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter>
-      </defs>
-      <circle cx="112" cy="80" r="58" fill="#F4D486" opacity=".5"/>
-      <circle cx="470" cy="262" r="70" fill="#CDEDE0" opacity=".8"/>
-      <!-- old loan card -->
-      <g filter="url(#kv-shadow)">
-        <rect x="60" y="70" width="200" height="86" rx="18" fill="#FFFFFF" stroke="#D8E4DC"/>
-        <text x="82" y="100" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#788A91">Nuværende rente</text>
-        <text x="82" y="134" font-family="Source Serif 4, Georgia, serif" font-size="30" font-weight="700" fill="#102B46">4,0 %</text>
+    <svg viewBox="0 0 560 330" role="img" aria-label="Graf hvor renten falder over tid">
+      <defs><filter id="d1s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter></defs>
+      <circle cx="112" cy="80" r="56" fill="#CDEDE0" opacity=".8"/><circle cx="466" cy="262" r="66" fill="#F4D486" opacity=".44"/>
+      <g filter="url(#d1s)"><rect x="70" y="66" width="360" height="200" rx="24" fill="#FFFFFF" stroke="#D8E4DC"/>
+        <line x1="104" y1="98" x2="104" y2="222" stroke="#E4EAE4" stroke-width="2"/>
+        <line x1="104" y1="222" x2="404" y2="222" stroke="#E4EAE4" stroke-width="2"/>
+        <path d="M116 118C170 122 210 150 250 178S330 210 392 206" fill="none" stroke="#42D5A0" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="116" cy="118" r="9" fill="#FFFFFF" stroke="#176453" stroke-width="4"/>
+        <circle cx="392" cy="206" r="11" fill="#0F3F35"/><path d="m386 206 4 4 8-9" fill="none" stroke="#42D5A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="124" y="110" font-family="Source Serif 4, Georgia, serif" font-size="18" font-weight="700" fill="#102B46">4,0 %</text>
+        <text x="360" y="196" font-family="Source Serif 4, Georgia, serif" font-size="18" font-weight="700" fill="#176453">3,0 %</text>
       </g>
-      <!-- new loan card -->
-      <g filter="url(#kv-shadow)">
-        <rect x="300" y="176" width="200" height="86" rx="18" fill="#0F3F35" stroke="#176453"/>
-        <text x="322" y="206" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#8FC7B4">Ny rente</text>
-        <text x="322" y="240" font-family="Source Serif 4, Georgia, serif" font-size="30" font-weight="700" fill="#42D5A0">3,0 %</text>
-      </g>
-      <!-- swap arrow -->
-      <g class="visual-float">
-        <path d="M250 150C300 150 300 176 300 190" fill="none" stroke="url(#kv-green)" stroke-width="7" stroke-linecap="round"/>
-        <path d="M292 178l8 14 8-14" fill="none" stroke="#176453" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="280" cy="150" r="8" fill="#F5C8A8"/>
-      </g>
-      <!-- gain pill -->
-      <g transform="translate(360 96)"><rect width="150" height="44" rx="14" fill="#FFFFFF" stroke="#D9E4DD"/><circle cx="22" cy="22" r="9" fill="#DDF3E9"/><path d="m18 25 4-6 4 3" fill="none" stroke="#176453" stroke-width="2"/><text x="40" y="26" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#324B55">Lavere ydelse</text></g>
+      <g class="visual-float" transform="translate(300 60)"><rect width="150" height="42" rx="14" fill="#102B46"/><circle cx="21" cy="21" r="9" fill="#42D5A0"/><path d="M17 18l4 6 5-4" fill="none" stroke="#102B46" stroke-width="2"/><text x="38" y="25" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">Faldende rente</text></g>
     </svg>
   </div>
 </figure>

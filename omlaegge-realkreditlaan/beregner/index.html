@@ -93,42 +93,28 @@
   </div>
 </section>
 
-<figure class="editorial-illustration calc-tool is-reverse" aria-labelledby="ct-title">
+<figure class="editorial-illustration ill-compare is-reverse" aria-labelledby="d3">
   <figcaption class="illustration-copy">
     <span class="illustration-kicker">Se gevinsten ved en omlægning</span>
-    <h3 id="ct-title">Regn på, om en omlægning kan betale sig</h3>
-    <p>Sammenlign din nuværende ydelse med et nyt lån, og se gevinsten sat op mod omkostningerne — før du kontakter banken.</p>
-    <div class="illustration-points" aria-hidden="true"><span><i></i>Nuværende lån</span><span><i></i>Nyt lån</span><span><i></i>Gevinst</span></div>
+    <h3 id="d3">Stil den nuværende ydelse op mod den nye</h3>
+    <p>Beregneren sammenligner dit nuværende lån med et nyt og viser forskellen i ydelse — sat op mod omkostningerne, så du kan se, om omlægningen reelt kan betale sig.</p>
+    <div class="illustration-points" aria-hidden="true"><span><i></i>Nuværende</span><span><i></i>Nyt lån</span><span><i></i>Gevinst</span></div>
   </figcaption>
   <div class="illustration-stage">
-    <svg viewBox="0 0 560 330" role="img" aria-label="Illustration af en beregner med et resultat for månedlig ydelse">
-      <defs>
-        <linearGradient id="ct-green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42D5A0"/><stop offset="1" stop-color="#176453"/></linearGradient>
-        <filter id="ct-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter>
-      </defs>
-      <circle cx="112" cy="82" r="56" fill="#CDEDE0" opacity=".8"/>
-      <circle cx="466" cy="262" r="66" fill="#F4D486" opacity=".44"/>
-      <!-- calculator -->
-      <g filter="url(#ct-shadow)">
-        <rect x="70" y="70" width="170" height="200" rx="22" fill="#102B46"/>
-        <rect x="92" y="92" width="126" height="46" rx="10" fill="#0B2036"/>
-        <text x="205" y="124" font-family="Source Serif 4, Georgia, serif" font-size="22" font-weight="700" fill="#42D5A0" text-anchor="end">12.480</text>
-        <g fill="#20456A">
-          <rect x="92" y="150" width="34" height="26" rx="7"/><rect x="138" y="150" width="34" height="26" rx="7"/><rect x="184" y="150" width="34" height="26" rx="7"/>
-          <rect x="92" y="184" width="34" height="26" rx="7"/><rect x="138" y="184" width="34" height="26" rx="7"/><rect x="184" y="184" width="34" height="26" rx="7"/>
-          <rect x="92" y="218" width="34" height="26" rx="7"/><rect x="138" y="218" width="34" height="26" rx="7"/>
-        </g>
-        <rect x="184" y="218" width="34" height="26" rx="7" fill="#42D5A0"/>
+    <svg viewBox="0 0 560 330" role="img" aria-label="Sammenligning af nuværende og ny ydelse">
+      <defs><linearGradient id="d3g" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#42D5A0"/><stop offset="1" stop-color="#176453"/></linearGradient><filter id="d3s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter></defs>
+      <circle cx="110" cy="80" r="56" fill="#F4D486" opacity=".46"/><circle cx="466" cy="262" r="66" fill="#CDEDE0" opacity=".8"/>
+      <g filter="url(#d3s)"><rect x="70" y="70" width="380" height="196" rx="24" fill="#FFFFFF" stroke="#D8E4DC"/>
+        <text x="98" y="112" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#788A91">Nuværende ydelse</text>
+        <rect x="98" y="122" width="300" height="26" rx="13" fill="#EEF1EC"/>
+        <rect x="98" y="122" width="300" height="26" rx="13" fill="#C8D3CD"/>
+        <text x="384" y="140" font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#324B55" text-anchor="end">13.900</text>
+        <text x="98" y="184" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#176453">Ny ydelse</text>
+        <rect x="98" y="194" width="300" height="26" rx="13" fill="#EEF1EC"/>
+        <rect x="98" y="194" width="238" height="26" rx="13" fill="url(#d3g)"/>
+        <text x="322" y="212" font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#fff" text-anchor="end">12.480</text>
       </g>
-      <!-- result panel -->
-      <g filter="url(#ct-shadow)">
-        <rect x="286" y="112" width="216" height="116" rx="18" fill="#FFFFFF" stroke="#D8E4DC"/>
-        <text x="308" y="146" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#788A91">Månedlig ydelse</text>
-        <text x="308" y="184" font-family="Source Serif 4, Georgia, serif" font-size="30" font-weight="700" fill="#102B46">12.480 kr</text>
-        <rect x="308" y="198" width="120" height="8" rx="4" fill="#DDF3E9"/>
-        <rect x="308" y="198" width="76" height="8" rx="4" fill="#42D5A0"/>
-      </g>
-      <g transform="translate(360 60)"><rect width="140" height="42" rx="14" fill="#102B46"/><circle cx="21" cy="21" r="9" fill="#42D5A0"/><path d="m17 21 3 3 5-7" fill="none" stroke="#102B46" stroke-width="2"/><text x="38" y="25" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Klart overblik</text></g>
+      <g class="visual-float" transform="translate(300 60)"><rect width="150" height="42" rx="14" fill="#102B46"/><circle cx="21" cy="21" r="9" fill="#42D5A0"/><path d="m17 21 3 3 5-7" fill="none" stroke="#102B46" stroke-width="2"/><text x="38" y="25" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">Gevinst pr. måned</text></g>
     </svg>
   </div>
 </figure>

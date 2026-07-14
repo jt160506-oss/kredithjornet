@@ -43,48 +43,31 @@
   </div>
 </section>
 
-<figure class="editorial-illustration bank-switch" aria-labelledby="bx-title">
+<figure class="editorial-illustration ill-costs" aria-labelledby="d2">
   <figcaption class="illustration-copy">
     <span class="illustration-kicker">Hvad et bankskifte koster</span>
-    <h3 id="bx-title">Regn omkostningerne med, før du flytter</h3>
-    <p>Et skifte kan koste gebyrer til tinglysning, vurdering og indfrielse. De skal veje op mod gevinsten ved de nye vilkår, før flytningen betaler sig.</p>
-    <div class="illustration-points" aria-hidden="true"><span><i></i>Tinglysning</span><span><i></i>Vurdering</span><span><i></i>Gevinst</span></div>
+    <h3 id="d2">Læg omkostningerne op mod gevinsten</h3>
+    <p>Et skifte kan koste tinglysning, vurdering og indfrielse af det gamle lån. Tallene skal stilles op mod, hvad du sparer på de nye vilkår — så du ved, hvornår det betaler sig.</p>
+    <div class="illustration-points" aria-hidden="true"><span><i></i>Tinglysning</span><span><i></i>Vurdering</span><span><i></i>Indfrielse</span></div>
   </figcaption>
   <div class="illustration-stage">
-    <svg viewBox="0 0 560 330" role="img" aria-label="Illustration af et bankskifte hvor lånet flyttes fra én bank til en anden">
-      <defs>
-        <linearGradient id="bx-green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42D5A0"/><stop offset="1" stop-color="#176453"/></linearGradient>
-        <filter id="bx-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter>
-      </defs>
-      <circle cx="430" cy="80" r="58" fill="#F4D486" opacity=".5"/>
-      <circle cx="86" cy="264" r="70" fill="#CDEDE0" opacity=".8"/>
-      <!-- bank 1 -->
-      <g filter="url(#bx-shadow)">
-        <rect x="46" y="128" width="150" height="150" rx="20" fill="#FFFFFF" stroke="#D8E4DC"/>
-        <path d="M71 168L121 138L171 168" fill="#DDF3E9" stroke="#176453" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
-        <rect x="83" y="180" width="10" height="52" rx="3" fill="#8CA0A8"/><rect x="106" y="180" width="10" height="52" rx="3" fill="#8CA0A8"/><rect x="129" y="180" width="10" height="52" rx="3" fill="#8CA0A8"/>
-        <rect x="71" y="240" width="100" height="12" rx="4" fill="#102B46" opacity=".12"/>
-        <text x="121" y="270" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#788A91" text-anchor="middle">Nuværende bank</text>
-      </g>
-      <!-- bank 2 (dark, target) -->
-      <g filter="url(#bx-shadow)">
-        <rect x="364" y="128" width="150" height="150" rx="20" fill="#0F3F35" stroke="#176453"/>
-        <path d="M389 168L439 138L489 168" fill="none" stroke="#42D5A0" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
-        <rect x="401" y="180" width="10" height="52" rx="3" fill="#42D5A0" opacity=".7"/><rect x="424" y="180" width="10" height="52" rx="3" fill="#42D5A0" opacity=".7"/><rect x="447" y="180" width="10" height="52" rx="3" fill="#42D5A0" opacity=".7"/>
-        <rect x="389" y="240" width="100" height="12" rx="4" fill="#FFFFFF" opacity=".12"/>
-        <text x="439" y="270" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#8FC7B4" text-anchor="middle">Ny bank</text>
-      </g>
-      <!-- moving loan/house between -->
-      <g class="visual-float">
-        <path d="M206 176C260 150 300 150 352 176" fill="none" stroke="url(#bx-green)" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 14"/>
-        <path d="M344 168l10 8-6 12" fill="none" stroke="#176453" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        <g transform="translate(246 116)" filter="url(#bx-shadow)">
-          <rect width="72" height="60" rx="14" fill="#FFFFFF" stroke="#D8E4DC"/>
-          <path d="M20 30L36 17L52 30" fill="#DDF3E9" stroke="#176453" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
-          <path d="M26 28V44H46V28" fill="none" stroke="#176453" stroke-width="3.4" stroke-linejoin="round"/>
-          <rect x="33" y="34" width="6" height="10" rx="2" fill="#42D5A0"/>
+    <svg viewBox="0 0 560 330" role="img" aria-label="Oversigt over omkostninger ved bankskifte">
+      <defs><filter id="d2s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter></defs>
+      <circle cx="440" cy="80" r="56" fill="#F4D486" opacity=".48"/><circle cx="86" cy="266" r="66" fill="#CDEDE0" opacity=".8"/>
+      <g filter="url(#d2s)"><rect x="150" y="52" width="240" height="226" rx="20" fill="#FFFFFF" stroke="#D8E4DC"/>
+        <text x="174" y="88" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#102B46">Omkostninger ved skifte</text>
+        <g font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="600" fill="#53636D">
+          <text x="174" y="122">Tinglysning</text><text x="366" y="122" text-anchor="end" fill="#324B55" font-weight="700">1.730</text>
+          <text x="174" y="150">Vurdering</text><text x="366" y="150" text-anchor="end" fill="#324B55" font-weight="700">1.500</text>
+          <text x="174" y="178">Indfrielse</text><text x="366" y="178" text-anchor="end" fill="#324B55" font-weight="700">2.200</text>
         </g>
+        <line x1="174" y1="196" x2="366" y2="196" stroke="#E4EAE4" stroke-width="2"/>
+        <rect x="174" y="210" width="192" height="44" rx="12" fill="#DDF3E9"/>
+        <text x="190" y="238" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#176453">Vejl. i alt</text>
+        <text x="350" y="238" font-family="Source Serif 4, Georgia, serif" font-size="18" font-weight="700" fill="#0F3F35" text-anchor="end">5.430 kr</text>
       </g>
+      <g class="visual-float" transform="translate(354 150)"><rect width="150" height="46" rx="14" fill="#0F3F35"/><circle cx="24" cy="23" r="10" fill="#42D5A0"/><path d="m20 23 3 3 5-7" fill="none" stroke="#0F3F35" stroke-width="2"/><text x="42" y="28" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">Vej mod gevinst</text></g>
+      <text x="70" y="150" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#93A0A8">Eksempel</text>
     </svg>
   </div>
 </figure>
