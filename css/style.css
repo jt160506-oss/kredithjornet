@@ -1025,3 +1025,9 @@ details.q summary .ic{color:var(--kh-forest)}
 }
 .photo-band{margin:38px 0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);border:1px solid var(--border);display:block}
 .photo-band img{width:100%;height:clamp(230px,30vw,380px);object-fit:cover;display:block}
+
+/* ===== Konsistent kolonnebredde: illustrationer følger tekst-kolonnen ===== */
+.editorial-illustration{max-width:772px;margin-left:auto;margin-right:auto}
+@media(max-width:820px){.editorial-illustration{margin-left:24px;margin-right:24px}}
+/* fotobånd: samme kolonne (undgå dobbelt-indryk) */
+.photo-band{max-width:772px;margin-left:auto;margin-right:auto}
