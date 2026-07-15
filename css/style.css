@@ -1014,3 +1014,14 @@ details.q summary .ic{color:var(--kh-forest)}
 .author-portrait figcaption{margin-top:12px;font-size:13px;color:var(--muted);font-weight:600;line-height:1.5}
 .author-portrait figcaption strong{display:block;color:var(--kh-navy);font-family:var(--serif);font-size:16px;margin-bottom:1px}
 @media(max-width:640px){.author-portrait{float:none;width:100%;margin:0 0 20px}}
+
+/* ===== Foto-behandlinger: subtilt hero-stemningslag + normalt fotobånd ===== */
+.article-hero.photo-mood::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:var(--hero-photo);background-size:cover;background-position:76% center;
+  opacity:.12;
+  -webkit-mask-image:linear-gradient(100deg,transparent 40%,#000 97%);
+  mask-image:linear-gradient(100deg,transparent 40%,#000 97%);
+}
+.photo-band{margin:38px 0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);border:1px solid var(--border);display:block}
+.photo-band img{width:100%;height:clamp(230px,30vw,380px);object-fit:cover;display:block}
