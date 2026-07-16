@@ -1042,3 +1042,6 @@ details.q summary .ic{color:var(--kh-forest)}
 .side-photo{float:right;width:min(350px,46%);margin:8px 0 20px 30px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-soft);border:1px solid var(--border)}
 .side-photo img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
 @media(max-width:640px){.side-photo{float:none;width:100%;margin:0 0 22px}}
+
+/* ===== Kontrast: mini-titler (eyebrow) altid mørk, læsbar grøn ===== */
+.eyebrow{color:var(--kh-forest) !important}
