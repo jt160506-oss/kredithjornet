@@ -23,6 +23,6 @@ SÅDAN (GitHub Desktop)
 VIGTIGT: Pakken er bygget ud fra din SENESTE pushede version. Hvis du har lavet
 lokale ændringer siden sidste push, som du ikke har pushet, så sig til først.
 
-BEMÆRK: Mappen konvertering-realkreditlaan er stadig med (uændret). Det er den
-dublet-beregner, vi talte om. Når du er klar, kan vi fjerne den, så den ikke
-konkurrerer med din nye konverteringsberegner.
+BEMÆRK: Mappen konvertering-realkreditlaan er med som en bevidst redirect til
+den nye konverteringsberegner. Siden er markeret noindex, så gamle links virker,
+uden at den konkurrerer med den nye side i søgemaskinerne.
