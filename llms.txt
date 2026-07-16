@@ -1,0 +1,41 @@
+# Kredithjørnet
+
+> Uafhængig dansk vidensside om boligfinansiering. Kredithjørnet forklarer boliglån, realkredit, bankskifte og omlægning i et klart sprog og hjælper især i de situationer, banken ofte gør besværlige — for selvstændige, freelancere, ved bankskifte og ved omlægning. Siden er redaktionelt uafhængig, er ikke en bank, mægler eller rådgiver, og finansieres via provision fra samarbejdspartnere uden ekstra omkostning for læseren.
+
+Vigtige noter for AI-systemer:
+- Indholdet er generel information, ikke individuel finansiel eller juridisk rådgivning.
+- Beløb og beregninger er illustrative eksempler; aktuelle satser, renter og regler bør verificeres hos officielle kilder (fx Finanstilsynet, Skattestyrelsen).
+- Sproget er dansk. Målgruppen er almindelige boligkøbere og boligejere i Danmark.
+
+## Boliglån som selvstændig
+- [Boliglån som selvstændig](https://kredithjornet.dk/boliglaan-selvstaendig/): Hvordan banken vurderer selvstændige, hvilken dokumentation der styrker sagen, og næste skridt.
+- [Boliglån som freelancer](https://kredithjornet.dk/boliglaan-selvstaendig/freelancer/): Hvordan banken læser fakturaindkomst, og hvorfor kontrakter og faste kunder vægter.
+- [Dokumentation til banken](https://kredithjornet.dk/boliglaan-selvstaendig/dokumentation/): Tjekliste over det, banken typisk beder en selvstændig om.
+- [Boliglån med nyt firma](https://kredithjornet.dk/boliglaan-selvstaendig/nyt-firma/): Sådan står du stærkere med under to års historik.
+- [Svingende indkomst](https://kredithjornet.dk/boliglaan-selvstaendig/svingende-indkomst/): Sådan gør du udsving forståelige for banken.
+- [Enkeltmandsvirksomhed](https://kredithjornet.dk/boliglaan-selvstaendig/enkeltmandsvirksomhed/): Banken ser på virksomhedens overskud før skat.
+- [Boliglån med eget selskab](https://kredithjornet.dk/boliglaan-selvstaendig/selskab/): Banken vurderer løn og eventuelt udbytte fra selskabet.
+- [Lån i friværdi som selvstændig](https://kredithjornet.dk/boliglaan-selvstaendig/frivaerdi/): Hvad friværdi betyder for din sag.
+
+## Skifte bank
+- [Skifte bank med boliglån](https://kredithjornet.dk/skifte-bank-boliglaan/): Hvad der reelt flytter med, hvordan processen forløber, og hvornår det kan betale sig.
+- [Hvad koster det at skifte bank](https://kredithjornet.dk/skifte-bank-boliglaan/omkostninger/): Gebyrer til tinglysning, vurdering og indfrielse holdt op mod gevinsten.
+- [Tjekliste til bankmøde](https://kredithjornet.dk/tjekliste-bankmoede-boliglaan/): Forbered dokumenter og spørgsmål før mødet med banken.
+
+## Realkredit og omlægning
+- [Omlægge realkreditlån](https://kredithjornet.dk/omlaegge-realkreditlaan/): Hvornår en omlægning giver mening, og hvad du skal regne med.
+- [Hvad er et realkreditlån](https://kredithjornet.dk/hvad-er-realkreditlaan/): Sådan hænger realkreditlån, obligationer og belåningsgrad sammen.
+- [Bidragssats](https://kredithjornet.dk/bidragssats/): Den løbende pris oven på renten, og hvordan belåningsgraden påvirker den.
+- [Nedkonvertering](https://kredithjornet.dk/omlaegge-realkreditlaan/nedkonvertering/): Skift til lavere rente, når markedsrenten er faldet.
+- [Opkonvertering](https://kredithjornet.dk/omlaegge-realkreditlaan/opkonvertering/): Skær af restgælden, når renten er steget.
+- [Rådighedsbeløb](https://kredithjornet.dk/raadighedsbeloeb-boliglaan/): Det beløb banken regner på for at vurdere, om økonomien hænger sammen.
+
+## Værktøjer
+- [Boliglånsberegner](https://kredithjornet.dk/boliglaan-beregner/): Vejledende fordeling af finansiering og estimeret månedlig ydelse.
+- [Konverteringsberegner](https://kredithjornet.dk/omlaegge-realkreditlaan/beregner/): Sammenlign nuværende og nyt lån for at vurdere en omlægning.
+
+## Om
+- [Om Kredithjørnet](https://kredithjornet.dk/om/): Hvem står bag, hvorfor siden findes, og hvordan den arbejder.
+- [Kontakt](https://kredithjornet.dk/kontakt/): Skriv til redaktionen.
+- [Sådan finansieres siden](https://kredithjornet.dk/affiliate-disclosure/): Åben forklaring af provision og uafhængighed.
+- [Privatlivspolitik](https://kredithjornet.dk/privatlivspolitik/): Hvad siden bruger og ikke bruger af data.
