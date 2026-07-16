@@ -353,7 +353,7 @@ details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--te
   .footer-top{grid-template-columns:1fr;gap:36px}
   .footer-cols{grid-column:1;grid-template-columns:repeat(3,1fr)}
 }
-@media(max-width:860px){
+@media(max-width:940px){
   .nav-pill,.header-cta{display:none}
   .site-header{background:#10243f}
   .header-inner{height:82px}
