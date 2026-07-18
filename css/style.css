@@ -978,14 +978,19 @@ details.q summary .ic{color:var(--kh-forest)}
   background:
     radial-gradient(circle at 88% 14%,rgba(24,199,137,.07),transparent 26rem),
     linear-gradient(160deg,#FDFCFA 0%,#F0ECE4 100%);
-  border-bottom:1px solid var(--border);
 }
 .hero::before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background:url('/assets/img/photo-hjemmekontor.jpg') 78% center/cover no-repeat;
-  opacity:.36;
-  -webkit-mask-image:linear-gradient(105deg,transparent 26%,#000 88%);
-  mask-image:linear-gradient(105deg,transparent 26%,#000 88%);
+  opacity:.62;
+  -webkit-mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 62%,transparent 99%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 62%,transparent 99%);
+  mask-composite:intersect;
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:130px;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,var(--paper-2) 94%);
 }
 .hero .wrap{position:relative;z-index:2}
 .hero h1{color:var(--kh-navy)}
