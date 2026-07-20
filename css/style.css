@@ -51,7 +51,6 @@
   --text-2:#344054;
   --muted:#667085;
   --border:#E7DED0;
-  --shadow:0 24px 70px -36px rgba(8,26,51,.38);
   --shadow-soft:0 16px 50px -34px rgba(8,26,51,.35);
   --radius-sm:12px;
   --radius:20px;
@@ -144,7 +143,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 /* hero overview panel */
 .panel{background:#fff;color:var(--text);border-radius:var(--radius-lg);padding:26px;box-shadow:0 40px 90px -50px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.4)}
 .panel-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-2)}
-.panel h3{font-size:23px;margin-top:6px}
+.panel h2{font-size:23px;margin-top:6px}
 .panel-sub{font-size:14px;margin-top:8px}
 .split{display:flex;gap:8px;margin:22px 0 18px;border-radius:14px;overflow:hidden;height:14px}
 .split i{display:block;height:100%}
@@ -168,8 +167,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}
 .trust-grid .cell{background:var(--ink-2);padding:24px 22px}
 .trust-grid .cell:nth-child(odd){background:#0c2243}
-.trust h4{color:#fff;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:0;margin:0 0 4px;display:flex;align-items:center;gap:9px}
-.trust h4 svg{width:18px;height:18px;color:var(--green)}
+.trust h3{color:#fff;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:0;margin:0 0 4px;display:flex;align-items:center;gap:9px}
+.trust h3 svg{width:18px;height:18px;color:var(--green)}
 .trust p{color:rgba(255,255,255,.62);font-size:13.5px}
 
 /* ---------- Section base (forside) ---------- */
@@ -336,8 +335,6 @@ details.q summary .ic{width:22px;height:22px;flex:0 0 auto;color:var(--green-2);
 details.q[open] summary .ic{transform:rotate(45deg)}
 details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--text-2)}
 
-/* generel intro-boks til artikler uden hero-undertekst (valgfri) */
-.lead-note{font-size:17px;line-height:1.7;color:var(--text-2);margin-top:0}
 
 /* disclaimer */
 .disclaimer{margin-top:40px;background:#fbf8f1;border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px 22px}
@@ -352,7 +349,7 @@ details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--te
 .footer-brand .brand{margin-bottom:16px}
 .footer-brand p{color:rgba(255,255,255,.6);font-size:14px;max-width:30em;line-height:1.7}
 .footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;grid-column:2 / -1}
-.fcol h5{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin:0 0 16px}
+.fcol h2{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin:0 0 16px}
 .fcol ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
 .fcol a{color:rgba(255,255,255,.68);font-size:14px;transition:color .15s ease}
 .fcol a:hover{color:#fff}
@@ -360,6 +357,7 @@ details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--te
 .footer-disclaimer{color:rgba(255,255,255,.5);font-size:12.5px;line-height:1.7;max-width:70em}
 .footer-disclaimer strong{color:rgba(255,255,255,.72);font-weight:600}
 .footer-meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:rgba(255,255,255,.4);font-size:12.5px}
+.footer-meta a:hover{color:rgba(255,255,255,.78)}
 
 /* ============================================================
    RESPONSIV
@@ -506,37 +504,6 @@ details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--te
   .calc-tool{grid-template-columns:1fr}
   .calc-inputs{border-right:0;border-bottom:1px solid var(--border)}
 }
-
-/* ============================================================
-   KONVERTERINGSBEREGNER
-   ============================================================ */
-.convert-tool{display:grid;grid-template-columns:1.12fr .88fr;gap:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);background:#fff;margin:8px 0 44px}
-.convert-inputs{display:grid;gap:0;background:#fff}
-.convert-panel{padding:30px;border-bottom:1px solid var(--border)}
-.convert-panel:last-child{border-bottom:0}
-.convert-panel h2{font-size:16px;font-family:var(--sans);font-weight:700;letter-spacing:0;margin:0 0 18px}
-.convert-results{padding:30px;background:linear-gradient(160deg,#081A33,#0C2748);color:#fff}
-.convert-results .res-label{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green)}
-.convert-badge{display:inline-flex;margin-top:12px;border:1px solid rgba(24,199,137,.42);background:rgba(24,199,137,.13);color:var(--green);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
-.metric-main{margin-top:20px;padding:20px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:16px}
-.metric-main span,.metric span{display:block;font-size:12.5px;font-weight:700;color:rgba(255,255,255,.62);letter-spacing:.02em}
-.metric-main b{display:block;font-family:var(--serif);font-size:32px;line-height:1.1;color:var(--green);margin-top:8px}
-.metric-main b.negative{color:var(--gold)}
-.metric-main small{display:block;color:rgba(255,255,255,.62);font-size:12px;line-height:1.45;margin-top:6px}
-.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.metric{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:14px;padding:14px}
-.metric b{display:block;font-family:var(--serif);font-size:18px;color:#fff;margin-top:6px;line-height:1.2}
-#paymentDiff.negative{color:var(--gold)}
-
-@media(max-width:860px){
-  .convert-tool{grid-template-columns:1fr}
-}
-@media(max-width:560px){
-  .convert-panel,.convert-results{padding:24px 20px}
-  .metric-grid{grid-template-columns:1fr}
-  .metric-main b{font-size:28px}
-}
-
 /* === Beregner-dropdown i hovednavigation (tilføjet juni 2026) === */
 .nav-drop{position:relative;display:inline-flex}
 .nav-drop>a{display:inline-flex;align-items:center;gap:5px}
@@ -553,7 +520,7 @@ details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--te
    LAG 2 — REBRAND-FARVELAG (varme, former, billeder)
    ############################################################ */
 /* ===== Kredithjørnet rebrand v2 — kun farver, former og billeder. Layout urørt. ===== */
-:root{ --sand:#EFE6D3; --sand-2:#F4EDDE; }
+:root{ --sand-2:#F4EDDE; }
 
 /* Header: lys og varm i stedet for mørk navy */
 .site-header{background:#FFFFFF;border-bottom:1px solid #E4DAC8;box-shadow:0 6px 22px -8px rgba(8,26,51,.20)}
@@ -577,8 +544,6 @@ details.q .a{padding:0 22px 20px;font-size:15.5px;line-height:1.7;color:var(--te
 .article-hero .breadcrumb a:hover{color:var(--ink)}
 .article-hero .lede{color:var(--text-2)}
 .article-hero .byline{color:var(--muted)}
-.hero-illustration{position:absolute;right:-16px;bottom:-14px;width:min(47%,510px);height:auto;z-index:1;pointer-events:none;filter:drop-shadow(0 26px 36px rgba(8,26,51,.10))}
-@media(max-width:900px){.hero-illustration{width:290px;opacity:.45;right:-36px;bottom:-24px}}
 
 /* Beslutningsmatrix: blød grøn header i stedet for mørk navy */
 table.matrix th{background:var(--green-3);color:var(--ink);border-bottom:1px solid rgba(14,166,111,.28)}
@@ -613,11 +578,9 @@ table.matrix th{background:var(--green-3);color:var(--ink);border-bottom:1px sol
   --kh-navy:#102B46;
   --kh-mint:#DDF3EA;
   --kh-mint-2:#EEF8F3;
-  --kh-cream:#F6F2E9;
   --kh-paper:#FCFBF8;
   --kh-peach:#F5C8A8;
   --kh-yellow:#F4D486;
-  --kh-line:#DED9CE;
   --kh-copy:#23343F;
   --kh-muted:#61717A;
   --kh-shadow:0 22px 64px -38px rgba(16,43,70,.33);
@@ -638,9 +601,6 @@ h1,h2,h3{color:var(--kh-navy)}
 .wrap{max-width:1200px}
 .article-wrap{max-width:820px}
 
-/* Reading progress gives a polished editorial cue. */
-.reading-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:250;pointer-events:none}
-.reading-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--green),#63D8AA);box-shadow:0 0 14px rgba(24,199,137,.5)}
 
 /* Header — crisp, visible and premium instead of a floating pill bar. */
 .site-header{
@@ -814,7 +774,7 @@ details.q summary .ic{color:var(--kh-forest)}
 .site-footer{background:#0D2D2A;padding-top:70px}
 .footer-brand .brand{font-family:var(--sans)}
 .footer-disclaimer strong{color:#BDE8D8}
-.fcol h5{color:#78DDBB}
+.fcol h2{color:#78DDBB}
 
 @media(max-width:1040px){
   .hero-layout{grid-template-columns:1fr .88fr;gap:38px}
@@ -887,7 +847,8 @@ details.q summary .ic{color:var(--kh-forest)}
 .illustration-copy{padding:34px 32px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
 .illustration-kicker{display:inline-flex;align-items:center;gap:8px;width:max-content;font-size:11.5px;font-weight:800;letter-spacing:.075em;text-transform:uppercase;color:var(--ill-accent)}
 .illustration-kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 5px color-mix(in srgb,currentColor 12%,transparent)}
-.illustration-copy h3{font-size:27px;line-height:1.12;letter-spacing:-.035em;margin-top:13px;color:var(--kh-navy)}
+.illustration-copy h2{font-size:27px;line-height:1.12;letter-spacing:-.035em;margin-top:13px;color:var(--kh-navy)}
+.illustration-copy h2::before{content:none}
 .illustration-copy p{font-size:15px;line-height:1.65;margin-top:12px;color:#52646D}
 .illustration-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .illustration-points span{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:var(--kh-paper);border:1px solid rgba(16,43,70,.08);font-size:11.5px;font-weight:750;color:#52636C}
@@ -898,7 +859,6 @@ details.q summary .ic{color:var(--kh-forest)}
   linear-gradient(135deg,transparent 0 47%,rgba(16,43,70,.025) 47% 48%,transparent 48% 100%)}
 .illustration-stage::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-70px;bottom:-72px;background:rgba(244,212,134,.35);z-index:0}
 .illustration-stage svg{position:relative;z-index:1;width:100%;height:100%;min-height:300px;display:block}
-.illustration-caption{position:absolute;right:15px;bottom:12px;z-index:2;font-size:9.5px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;color:rgba(16,43,70,.45)}
 
 .bank-lens{--ill-bg:linear-gradient(145deg,#EAF5EF,#F7F4EA);--ill-accent:#176453}
 .income-story{--ill-bg:linear-gradient(145deg,#102B46,#173E54);--ill-accent:#C4774B;background:#fff}
@@ -943,7 +903,7 @@ details.q summary .ic{color:var(--kh-forest)}
   .editorial-illustration.is-reverse .illustration-copy{order:1}
   .editorial-illustration.is-reverse .illustration-stage{order:2}
   .illustration-copy{padding:28px 24px}
-  .illustration-copy h3{font-size:25px}
+  .illustration-copy h2{font-size:25px}
   .illustration-stage,.illustration-stage svg{min-height:270px}
   .journey-map-head{align-items:flex-start;flex-direction:column;padding:27px 24px 0;gap:14px}
   .journey-map-head h3{font-size:26px}
@@ -1029,18 +989,12 @@ details.q summary .ic{color:var(--kh-forest)}
 .trust .wrap{position:relative}
 .trust-grid{grid-template-columns:repeat(4,1fr);gap:16px;background:transparent}
 .trust-grid .cell,.trust-grid .cell:nth-child(odd){background:#fff;border:1px solid var(--border);border-radius:18px;padding:24px 22px;box-shadow:var(--shadow-soft)}
-.trust h4{color:var(--kh-navy)}
-.trust h4 svg{color:var(--green-2)}
+.trust h3{color:var(--kh-navy)}
+.trust h3 svg{color:var(--green-2)}
 .trust p{color:#53646C}
 @media(max-width:820px){.trust-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.trust-grid{grid-template-columns:1fr}}
 
-/* Portræt af udgiver på om-siden */
-.author-portrait{float:right;width:min(300px,44%);margin:4px 0 18px 30px}
-.author-portrait img{width:100%;height:auto;border-radius:18px;box-shadow:var(--shadow-soft);border:1px solid var(--border);display:block}
-.author-portrait figcaption{margin-top:12px;font-size:13px;color:var(--muted);font-weight:600;line-height:1.5}
-.author-portrait figcaption strong{display:block;color:var(--kh-navy);font-family:var(--serif);font-size:16px;margin-bottom:1px}
-@media(max-width:640px){.author-portrait{float:none;width:100%;margin:0 0 20px}}
 
 /* ===== Foto-behandlinger: subtilt hero-stemningslag + normalt fotobånd ===== */
 .article-hero.photo-mood::before{

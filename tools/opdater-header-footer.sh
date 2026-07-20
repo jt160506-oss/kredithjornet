@@ -47,7 +47,7 @@ find "$ROOT" -name '*.html' -not -path "$ROOT/.git/*" -not -path "$ROOT/partials
           next
         }
 
-        if (index($0, "<!-- KH:" mark " -->") > 0) skip = 1
+        if (index($0, "<!-- KH:" mark) > 0) skip = 1
         else if (line != "<div id=\"" mount "\"></div>") { print; next }
 
         print "<!-- KH:" mark " — indsat af tools/opdater-header-footer.sh. Ret i partials/, ikke her. -->"
