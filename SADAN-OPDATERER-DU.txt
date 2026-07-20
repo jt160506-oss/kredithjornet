@@ -1,28 +1,47 @@
-HELE DIT SITE MED NY NAVIGATION
-===============================
-Denne pakke ER hele dit site, som det ser ud live lige nu, PLUS:
-- "Beregner" i menuen er nu en dropdown med begge beregnere
-  (Boliglånsberegner + Konverteringsberegner) — på alle sider.
-- Footeren linker nu til de nye sider (svingende indkomst, nedkonvertering,
-  opkonvertering, konverteringsberegner) — på alle sider.
-- Selvstændig-siden linker til "svingende indkomst".
-- En enkelt CSS-regel til dropdownen er tilføjet i css/style.css.
+SÅDAN RETTER DU MENU OG FOOTER
+==============================
 
-Fordi pakken er HELE dit site (ikke løse filer), er det sikkert at overskrive:
-alt det, du har i forvejen, er med — der forsvinder ikke noget.
+Header og footer står nu direkte i hver eneste HTML-side. Det er derfor,
+siden bliver vist med det samme på mobil i stedet for at vente på JavaScript.
 
-SÅDAN (GitHub Desktop)
-1. Pak zip'en ud.
-2. Marker ALT indhold i den udpakkede mappe og kopiér det ind i din repo-mappe.
-   Vælg "Erstat" til alt. (Rør IKKE den skjulte .git-mappe — den ligger i repoet
-   og er ikke med i zip'en, så den forbliver urørt.)
-3. Åbn GitHub Desktop. I "Changes" kan du nu SE præcis hvilke filer der er ændret
-   — det er dit overblik. Kig det igennem hvis du vil.
-4. Commit + push.
+Du skal STADIG kun rette ét sted:
 
-VIGTIGT: Pakken er bygget ud fra din SENESTE pushede version. Hvis du har lavet
-lokale ændringer siden sidste push, som du ikke har pushet, så sig til først.
+  partials/header.html   ← menuen
+  partials/footer.html   ← sidefoden
 
-BEMÆRK: Mappen konvertering-realkreditlaan er med som en bevidst redirect til
-den nye konverteringsberegner. Siden er markeret noindex, så gamle links virker,
+Når du har rettet i en af dem, kører du:
+
+  sh tools/opdater-header-footer.sh
+
+Den skriver ændringen ud i alle sider. Derefter commit + push som normalt.
+Scriptet kræver ingen installation og kan køres så mange gange du vil —
+det giver samme resultat hver gang.
+
+Hvis du glemmer at køre scriptet, sker der ikke noget farligt: siderne
+viser bare den gamle menu, indtil du kører det.
+
+
+HVAD DU IKKE SKAL RØRE
+----------------------
+I HTML-filerne ligger menu og footer mellem disse linjer:
+
+  <!-- KH:HEADER ... -->   ...   <!-- /KH:HEADER -->
+  <!-- KH:FOOTER ... -->   ...   <!-- /KH:FOOTER -->
+
+Alt mellem dem bliver overskrevet, næste gang scriptet kører.
+Ret i partials/ i stedet.
+
+
+BILLEDER
+--------
+Fotos gemmes i assets/img/ i WebP med en størrelse, der passer til, hvor
+stort billedet faktisk vises. Filnavnene har bredden i sig, fx
+photo-bankmoede-800.webp. Læg ikke 1600 px-billeder ind på pladser, der
+kun vises i 350 px — det er den dyreste enkeltfejl på mobil.
+
+
+BEMÆRK
+------
+Mappen konvertering-realkreditlaan er en bevidst redirect til den nye
+konverteringsberegner. Siden er markeret noindex, så gamle links virker,
 uden at den konkurrerer med den nye side i søgemaskinerne.

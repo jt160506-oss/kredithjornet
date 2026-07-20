@@ -8,8 +8,9 @@ Uafhængig dansk vidensside om boligfinansiering. Statisk HTML/CSS/JS på GitHub
 Ingen build-step, intet framework. Introducér ikke framework/build uden Jakobs udtrykkelige ønske.
 
 ## Teknisk baseline
-- Header og footer ligger i `partials/header.html` og `partials/footer.html` og hentes ind via `js/include.js`. Ret menu/footer **ét sted** — det slår igennem på alle sider.
+- Header og footer redigeres **kun** i `partials/header.html` og `partials/footer.html`. De skrives ind i hver enkelt HTML-side af `tools/opdater-header-footer.sh`, som skal køres efter hver ændring i `partials/`. Indholdet ligger mellem `<!-- KH:HEADER -->`/`<!-- /KH:HEADER -->` og tilsvarende for footer — ret aldrig direkte i disse blokke. `js/include.js` markerer kun aktiv side og styrer mobilmenuen; den henter ikke længere noget.
 - Alle sider linker til `css/style.css` (ét fælles designsystem).
+- Google Fonts indlæses asynkront (`preload` + `media="print" onload`) med `<noscript>`-fallback. Behold det mønster — et almindeligt `<link rel="stylesheet">` til fonts blokerer visningen og koster mobil-LCP direkte.
 - Sidespecifik CSS/JS (fx beregnere) ligger inline i den enkelte side.
 
 ## Designsystem — hold dette præcist
@@ -32,6 +33,9 @@ Fem dropdowns: **Selvstændig · Skifte bank · Realkredit · Værktøjer · Om.
 - Ikke for mange visuelle elementer pr. side (typisk én illustration + evt. ét foto).
 - Stockfotos gives en ensartet, varm, mat grade, så de fremstår som ét sæt.
 - Vigtig tekst i HTML, ikke inde i billeder.
+- **Gem fotos i WebP, skaleret til den plads de faktisk vises på.** Filnavnet bærer bredden (`photo-bankmoede-800.webp`). Et 1600 px-billede i en 350 px-ramme er den dyreste enkeltfejl på mobil.
+- Sæt altid korrekte `width`/`height` svarende til filens faktiske pixelmål. Brug `srcset` + `sizes`, når billedet vises i markant forskellig bredde på mobil og desktop.
+- Kun billedet øverst på siden må have `fetchpriority="high"` (og evt. `<link rel="preload" as="image">`). Alt andet får `loading="lazy" decoding="async"`.
 
 ## Indhold & compliance
 Se også brand- og indholds-dokumenterne. Kort:
