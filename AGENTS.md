@@ -10,7 +10,8 @@ Ingen build-step, intet framework. Introducér ikke framework/build uden Jakobs 
 ## Teknisk baseline
 - Header og footer redigeres **kun** i `partials/header.html` og `partials/footer.html`. De skrives ind i hver enkelt HTML-side af `tools/opdater-header-footer.sh`, som skal køres efter hver ændring i `partials/`. Indholdet ligger mellem `<!-- KH:HEADER -->`/`<!-- /KH:HEADER -->` og tilsvarende for footer — ret aldrig direkte i disse blokke. `js/include.js` markerer kun aktiv side og styrer mobilmenuen; den henter ikke længere noget.
 - Alle sider linker til `css/style.css` (ét fælles designsystem).
-- Google Fonts indlæses asynkront (`preload` + `media="print" onload`) med `<noscript>`-fallback. Behold det mønster — et almindeligt `<link rel="stylesheet">` til fonts blokerer visningen og koster mobil-LCP direkte.
+- Skrifterne hostes på eget domæne i `assets/fonts/` som variable woff2 (én fil pr. familie dækker alle vægte). `@font-face` står øverst i `css/style.css`, og hver side har `<link rel="preload" as="font" crossorigin>` på begge filer. **Indlæs aldrig skrifter fra Google Fonts igen** — det koster to eksterne opslag og giver et layoutskift, når skriften lander.
+- Store baggrundsbilleder i CSS (`background:url(...)`) kan browseren først opdage, når stylesheetet er læst. Har en side et hero-baggrundsfoto, skal det have `<link rel="preload" as="image" fetchpriority="high">` i sidens `<head>`.
 - Sidespecifik CSS/JS (fx beregnere) ligger inline i den enkelte side.
 
 ## Designsystem — hold dette præcist

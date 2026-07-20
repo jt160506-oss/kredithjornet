@@ -1,4 +1,24 @@
 /* ============================================================
+   Skrifter — hostet på eget domæne (assets/fonts/).
+   Variable fonte: én fil dækker alle vægte fra 400 til 800.
+   Begge er udgivet under Open Font License, se LICENSE-filerne.
+   ============================================================ */
+@font-face{
+  font-family:"DM Sans";
+  src:url("/assets/fonts/dm-sans-variable-latin.woff2") format("woff2");
+  font-weight:100 1000;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Source Serif 4";
+  src:url("/assets/fonts/source-serif-4-variable-latin.woff2") format("woff2");
+  font-weight:200 900;
+  font-style:normal;
+  font-display:swap;
+}
+
+/* ============================================================
    KREDITHJØRNET — FÆLLES DESIGNSYSTEM (style.css)
    Rebrand 2026. Én fil styrer hele sitets udseende.
    Opbygget i tre lag:
@@ -981,12 +1001,15 @@ details.q summary .ic{color:var(--kh-forest)}
 }
 .hero::before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:url('/assets/img/photo-hjemmekontor.jpg') 78% center/cover no-repeat;
+  background:url('/assets/img/photo-hjemmekontor-1600.webp') 78% center/cover no-repeat;
   opacity:.62;
   -webkit-mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 62%,transparent 99%);
   -webkit-mask-composite:source-in;
   mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 62%,transparent 99%);
   mask-composite:intersect;
+}
+@media(max-width:900px){
+  .hero::before{background-image:url('/assets/img/photo-hjemmekontor-800.webp')}
 }
 .hero::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:130px;z-index:1;pointer-events:none;
