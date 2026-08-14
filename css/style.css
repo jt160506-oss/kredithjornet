@@ -953,27 +953,35 @@ details.q summary .ic{color:var(--kh-forest)}
    FORSIDE 2026 — lys, central hero + lyst trust
    (kun forsidens .hero og .trust; øvrige sider urørt)
    ############################################################ */
+/* Heroen har ingen egen baggrundsfarve. Sidens baggrund løber ubrudt igennem,
+   og både farvelag og foto tones helt ud til 0 før sektionens underkant.
+   Dermed opstår der ingen vandret kant mod næste sektion — heller ikke i venstre
+   side, hvor sidens grønne skær er kraftigst. */
 .hero{
   color:var(--kh-navy);
+  background:transparent;
+}
+/* Varmt farvelag under fotoet */
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background:
     radial-gradient(circle at 88% 14%,rgba(24,199,137,.07),transparent 26rem),
     linear-gradient(160deg,#FDFCFA 0%,#F0ECE4 100%);
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 34%,rgba(0,0,0,.86) 54%,rgba(0,0,0,.55) 72%,rgba(0,0,0,.24) 87%,rgba(0,0,0,.07) 95%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 0%,#000 34%,rgba(0,0,0,.86) 54%,rgba(0,0,0,.55) 72%,rgba(0,0,0,.24) 87%,rgba(0,0,0,.07) 95%,transparent 100%);
 }
+/* Stemningsfoto */
 .hero::before{
-  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:url('/assets/img/photo-hjemmekontor-1600.webp') 78% center/cover no-repeat;
   opacity:.62;
-  -webkit-mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 62%,transparent 99%);
+  -webkit-mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 30%,rgba(0,0,0,.72) 52%,rgba(0,0,0,.34) 70%,rgba(0,0,0,.10) 84%,transparent 94%);
   -webkit-mask-composite:source-in;
-  mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 62%,transparent 99%);
+  mask-image:linear-gradient(105deg,transparent 22%,#000 70%),linear-gradient(180deg,#000 30%,rgba(0,0,0,.72) 52%,rgba(0,0,0,.34) 70%,rgba(0,0,0,.10) 84%,transparent 94%);
   mask-composite:intersect;
 }
 @media(max-width:900px){
   .hero::before{background-image:url('/assets/img/photo-hjemmekontor-800.webp')}
-}
-.hero::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:130px;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,transparent 0%,var(--paper-2) 94%);
 }
 .hero .wrap{position:relative;z-index:2}
 .hero h1{color:var(--kh-navy)}
