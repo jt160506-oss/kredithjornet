@@ -1060,3 +1060,12 @@ h1,h2,h3{overflow-wrap:break-word}
 .annonce{display:inline-block;margin:20px 0 -8px;padding:3px 9px;border-radius:6px;background:#F4D486;color:#102B46!important;font-size:12px;font-weight:700;line-height:1.4}
 .final-card .annonce{margin:22px 0 -14px}
 .inline-cta .note,.final-note{color:rgba(255,255,255,.78)}
+
+/* Mobilmenuen: fast panel på én skærm, der ruller indvendigt, mens siden bagved står stille */
+@media(max-width:940px){
+  body.menu-open{overflow:hidden}
+  .mobile-menu{position:fixed;top:88px;max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+}
+
+/* Telefon og mail i sidefoden skal være til at ramme med en finger */
+.footer-meta a{display:inline-block;padding:12px 0}
