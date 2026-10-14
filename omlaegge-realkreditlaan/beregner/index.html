@@ -61,6 +61,7 @@
 .cv-cell .cv-k{font-size:12px;color:rgba(255,255,255,.62);font-weight:600}
 .cv-cell .cv-v{font-size:18px;font-weight:700;color:#fff;margin-top:3px;font-family:var(--serif);letter-spacing:-.01em}
 .cv-cell .cv-v.is-green{color:var(--green)}
+.cv-eksempel{margin:16px 0 0;padding:14px 16px;border-radius:13px;border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.9);font-size:14px;line-height:1.6}
 .cv-verdict{margin-top:18px;display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
 .cv-verdict .cv-dot{flex:0 0 auto;width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--muted)}
 .cv-verdict.is-good .cv-dot{background:var(--green)}
@@ -217,11 +218,11 @@
         <text x="98" y="112" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#788A91">Nuværende ydelse</text>
         <rect x="98" y="122" width="300" height="26" rx="13" fill="#EEF1EC"/>
         <rect x="98" y="122" width="300" height="26" rx="13" fill="#C8D3CD"/>
-        <text x="384" y="140" font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#324B55" text-anchor="end">13.900</text>
+        <text x="384" y="140" font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#324B55" text-anchor="end">&#160;</text>
         <text x="98" y="184" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#176453">Ny ydelse</text>
         <rect x="98" y="194" width="300" height="26" rx="13" fill="#EEF1EC"/>
         <rect x="98" y="194" width="238" height="26" rx="13" fill="url(#d3g)"/>
-        <text x="322" y="212" font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#fff" text-anchor="end">12.480</text>
+        <text x="322" y="212" font-family="DM Sans, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#fff" text-anchor="end">&#160;</text>
       </g>
       <g class="visual-float" transform="translate(300 60)"><rect width="150" height="42" rx="14" fill="#102B46"/><circle cx="21" cy="21" r="9" fill="#42D5A0"/><path d="m17 21 3 3 5-7" fill="none" stroke="#102B46" stroke-width="2"/><text x="38" y="25" font-family="DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">Gevinst pr. måned</text></g>
     </svg>
@@ -271,12 +272,15 @@
     <div class="cv-head"><div class="cv-hl" id="headLabel">Ændring i månedlig ydelse</div><div class="cv-hv is-pos" id="headValue">–</div></div>
     <div class="cv-grid2">
       <div class="cv-cell"><div class="cv-k">Ny månedlig ydelse</div><div class="cv-v" id="rNyYdelse">–</div></div>
+      <div class="cv-cell"><div class="cv-k">ÅOP på det nye lån</div><div class="cv-v" id="rAop">–</div></div>
       <div class="cv-cell"><div class="cv-k">Nuværende ydelse</div><div class="cv-v" id="rGammelYdelse">–</div></div>
       <div class="cv-cell"><div class="cv-k" id="kRestgaeld">Ny restgæld</div><div class="cv-v" id="rRestgaeld">–</div></div>
       <div class="cv-cell"><div class="cv-k" id="kGevinst">Ændring i restgæld</div><div class="cv-v is-green" id="rGevinst">–</div></div>
       <div class="cv-cell"><div class="cv-k">Samlede omkostninger</div><div class="cv-v" id="rOmkost">–</div></div>
       <div class="cv-cell"><div class="cv-k" id="kBreakeven">Øget gæld opvejet efter</div><div class="cv-v" id="rBreakeven">–</div></div>
+      <div class="cv-cell"><div class="cv-k">Samlet at betale på det nye lån</div><div class="cv-v" id="rSamlet">–</div></div>
     </div>
+    <p class="cv-eksempel" id="rEksempel">Regneeksemplet for det nye lån vises her, når tallene er indtastet.</p>
     <div class="cv-verdict" id="verdict"><span class="cv-dot"></span><p id="verdictText">Indtast dine tal for at se en vejledende vurdering.</p></div>
     <p class="cv-mininote">Alle tal er vejledende og illustrative. Kurser ændrer sig dagligt — spørg dit realkreditinstitut om de faktiske kurser, før du beslutter dig.</p>
   </div></div>
@@ -287,7 +291,7 @@
     <p>At omlægge (konvertere) sit realkreditlån betyder, at det nuværende lån indfries og erstattes af et nyt. Hvilken vej der giver mening, afhænger af, om renten er faldet eller steget, siden du optog lånet. Ved <a href="/omlaegge-realkreditlaan/nedkonvertering/">nedkonvertering</a> er renten faldet, og du sigter mod en lavere ydelse. Ved <a href="/omlaegge-realkreditlaan/opkonvertering/">opkonvertering</a> er renten steget, og du kan skære toppen af din restgæld via en kursgevinst.</p>
     <p>Som grov tommelfingerregel taler man ofte om en reel gevinst, når forskellen i kuponrente er omkring 1,5 procentpoint eller mere, og når restgælden er stor nok til, at omkostningerne ikke æder gevinsten. Derfor skal det altid regnes konkret — og det er det, beregneren hjælper dig med.</p>
     <h2>Sådan regner beregneren — og hvad den ikke kan</h2>
-    <p>Beregneren bruger en forenklet annuitetsmodel med månedlige betalinger. Kuponrenten bruges i annuiteten, mens bidraget lægges til som et indledende månedsestimat. Ved nedkonvertering indgår både omkostninger og kursen på det nye lån i den øgede nominelle gæld. Ved opkonvertering vises den faktiske ændring i restgælden efter de samme poster — ikke kun den rå kursgevinst.</p>
+    <p>Beregneren bruger en forenklet annuitetsmodel med månedlige betalinger. Kuponrenten bruges i annuiteten, mens bidraget lægges til som et indledende månedsestimat. ÅOP og samlet beløb at betale for det nye lån regnes måned for måned med bidraget af restgælden. Ved nedkonvertering indgår både omkostninger og kursen på det nye lån i den øgede nominelle gæld. Ved opkonvertering vises den faktiske ændring i restgælden efter de samme poster — ikke kun den rå kursgevinst.</p>
     <ul>
       <li>Modellen er <strong>vejledende</strong> og tager ikke højde for skat, rentefradrag, differensrente eller præcis kursskæring.</li>
       <li>Kurser ændrer sig dagligt — få dem bekræftet hos dit realkreditinstitut.</li>
@@ -305,16 +309,17 @@
     <p>Tabellen viser et illustrativt eksempel: et lån på 2 mio. kr. med 27 år tilbage, en nuværende kuponrente på 5 %, en bidragssats på 0,7 %, en kurs på 98 på det nye lån og anslåede omkostninger på 12.000 kr. Break-even sammenholder den lavere bruttoydelse med hele stigningen i den nominelle gæld fra både kurs og omkostninger.</p>
     <div class="table-card">
       <table class="matrix">
-        <thead><tr><th>Rentefald (fald i kuponrente)</th><th>Lavere bruttoydelse</th><th>Øget restgæld opvejet efter</th></tr></thead>
+        <thead><tr><th>Rentefald (fald i kuponrente)</th><th>Lavere bruttoydelse</th><th>Øget restgæld opvejet efter</th><th>ÅOP på det nye lån</th></tr></thead>
         <tbody>
-          <tr><td>0,5 procentpoint</td><td>~272 kr/md</td><td>~16,2 år</td></tr>
-          <tr><td>1,0 procentpoint</td><td>~858 kr/md</td><td>~5,2 år</td></tr>
-          <tr><td>1,5 procentpoint</td><td>~1.426 kr/md</td><td>~3,1 år</td></tr>
-          <tr><td>2,0 procentpoint</td><td>~1.977 kr/md</td><td>~2,2 år</td></tr>
+          <tr><td>0,5 procentpoint</td><td>~272 kr/md</td><td>~16,2 år</td><td>5,6 %</td></tr>
+          <tr><td>1,0 procentpoint</td><td>~858 kr/md</td><td>~5,2 år</td><td>5,1 %</td></tr>
+          <tr><td>1,5 procentpoint</td><td>~1.426 kr/md</td><td>~3,1 år</td><td>4,5 %</td></tr>
+          <tr><td>2,0 procentpoint</td><td>~1.977 kr/md</td><td>~2,2 år</td><td>4,0 %</td></tr>
         </tbody>
       </table>
     </div>
     <p class="cv-tablenote">Illustrative tal beregnet med værktøjets forenklede model. De tager ikke højde for skat, rentefradrag, differensrente eller præcis kursskæring, og de er ikke et tilbud. Dine faktiske tal afhænger af de aktuelle kurser hos dit realkreditinstitut.</p>
+    <p class="cv-tablenote"><strong>Det nye lån i nederste række:</strong> realkreditlån med pant i boligen, hovedstol 2.053.061 kr. optaget til kurs 98, fast kuponrente 3 % og bidrag 0,7 % af restgælden. Løbetid 27 år, 324 månedlige ydelser, den første 10.451 kr. Omkostninger 12.000 kr. Samlet beløb at betale 3.230.514 kr. ÅOP 4,0 %.</p>
 
     <h3>Større lån gør et lille rentefald mere værd</h3>
     <p>Den samme rentebevægelse batter mere, jo større dit lån er, fordi besparelsen regnes af hele restgælden. Det er en af grundene til, at et lille rentefald sjældent kan betale sig på et mindre lån, mens det samme fald kan være rigeligt på et stort. Tallene nedenfor bruger de samme antagelser som ovenfor.</p>
@@ -329,6 +334,7 @@
         </tbody>
       </table>
     </div>
+    <p class="cv-tablenote">ÅOP på det nye lån er i eksemplet 5,6 %, 5,1 %, 4,5 % og 4,0 % for de fire rentefald. Ved 1 og 3 mio. kr. afviger den højst 0,1 procentpoint.</p>
     <p class="cv-tablenote">Illustrative tal. Prøv dine egne tal i beregneren ovenfor — den sammenholder den lavere bruttoydelse med ændringen i den nominelle restgæld ud fra dine kurser, renter og omkostninger.</p>
 
     <h3>Tre ting, tabellerne ikke fanger</h3>
@@ -481,6 +487,22 @@ function val(id){var v=parseFloat(document.getElementById(id).value);return Numb
 function clamp(n,min,max){return Math.min(Math.max(n,min),max);}
 function kr(n){return Math.round(n).toLocaleString('da-DK')+' kr';}
 function maanedsydelse(P,r,aar){var n=aar*12,mr=r/100/12;if(P<=0||n<=0)return 0;if(mr===0)return P/n;return P*mr/(1-Math.pow(1+mr,-n));}
+// Det nye laan maaned for maaned: annuitet paa kuponrenten, bidrag af restgaelden.
+function ydelsesraekke(P,kupon,bidragPct,n){
+  var A=maanedsydelse(P,kupon,n/12),mr=kupon/100/12,rest=P,ud=[];
+  for(var t=0;t<n;t++){ud.push(A+rest*bidragPct/100/12);rest=Math.max(0,rest-(A-rest*mr));}
+  return ud;
+}
+// ÅOP: den aarlige rente, hvor nutidsvaerdien af ydelserne svarer til det udbetalte beloeb.
+function aop(udbetalt,ydelser){
+  if(udbetalt<=0||!ydelser.length)return 0;
+  function nv(i){var f=Math.pow(1+i,-1/12),d=1,v=0;for(var t=0;t<ydelser.length;t++){d*=f;v+=ydelser[t]*d;}return v;}
+  var lo=0,hi=1;if(nv(lo)<udbetalt)return 0;
+  for(var k=0;k<80;k++){var mid=(lo+hi)/2;if(nv(mid)>udbetalt)lo=mid;else hi=mid;}
+  return (lo+hi)/2*100;
+}
+function pct1(x){return x.toLocaleString('da-DK',{minimumFractionDigits:1,maximumFractionDigits:1})+' %';}
+function pct2(x){return x.toLocaleString('da-DK',{maximumFractionDigits:2})+' %';}
 function calc(){
   var restgaeld=clamp(val('restgaeld'),0,100000000),kuponG=clamp(val('kuponGammel'),0,20),kuponN=clamp(val('kuponNy'),0,20),aar=clamp(val('loebetid')||1,1,40);
   var kursNy=clamp(val('kursNy')||100,40,100),bidrag=clamp(val('bidrag'),0,5),omkost=clamp(val('omkost'),0,1000000),indfriKurs=clamp(val('indfriKurs')||100,40,100);
@@ -494,6 +516,14 @@ function calc(){
   document.getElementById('rGammelYdelse').textContent=kr(ydG);
   document.getElementById('rRestgaeld').textContent=kr(nyRestgaeld);
   document.getElementById('rOmkost').textContent=kr(omkost);
+  // Regneeksempel for det nye laan (markedsfoeringsloven § 19): alle oplysninger, ÅOP lige saa tydeligt som ydelsen
+  var n=Math.round(aar*12),har=restgaeld>0&&nyRestgaeld>0,raekke=har?ydelsesraekke(nyRestgaeld,kuponN,bidrag,n):[];
+  var samlet=raekke.reduce(function(a,b){return a+b;},0)+omkost,aopNy=aop(nyRestgaeld*kursNy/100-omkost,raekke);
+  document.getElementById('rAop').textContent=har?pct1(aopNy):'–';
+  document.getElementById('rSamlet').textContent=har?kr(samlet):'–';
+  document.getElementById('rEksempel').textContent=har
+    ?'Regneeksempel for det nye lån: Realkreditlån med pant i boligen. Hovedstol '+kr(nyRestgaeld)+' optaget til kurs '+kursNy.toLocaleString('da-DK')+', fast kuponrente '+pct2(kuponN)+' og bidrag '+pct2(bidrag)+' af restgælden. Løbetid '+aar+' år, '+n+' månedlige ydelser, den første '+kr(ydN)+'. Omkostninger '+kr(omkost)+'. Samlet beløb at betale '+kr(samlet)+'. ÅOP '+pct1(aopNy)+'.'
+    :'Der er ikke noget nyt lån med de tal.';
   var head=document.getElementById('headValue'),headLabel=document.getElementById('headLabel');
   var verdict=document.getElementById('verdict'),vText=document.getElementById('verdictText');
   var renteforskel=Math.abs(kuponG-kuponN);

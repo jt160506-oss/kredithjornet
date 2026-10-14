@@ -45,6 +45,7 @@ Ikke entydigt. Argumenterne:
 ## Hvad der ikke er ændret, og hvorfor
 
 - **Bidragseksemplet** (/bidragssats/: 0,65 % af 2.000.000 kr. ≈ 13.000 kr. om året). Det forklarer begrebet bidrag og nævner ingen rente eller ydelse. Lav risiko.
+- **Omlægningseksemplet** (/omlaegge-realkreditlaan/: ydelsen falder ca. 1.100 kr. om måneden, omkostninger ca. 25.000 kr.). Ingen rentesats og intet bestemt lån. Lav risiko, men det er det første, der skal have et fuldt eksempel, hvis en jurist siger, at guiderne er omfattet.
 - **Rådighedseksemplet** (boligydelse 17.000 kr. i et budget). Beløbet er en budgetpost, ikke et lånetilbud. Lav risiko.
 - **Beregnernes startværdier** (rente 4,0 % osv.). De står som felter, brugeren selv retter, og ÅOP vises nu altid ved siden af resultatet.
 

@@ -24,6 +24,15 @@
 <script type="application/ld+json">
 [{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Forside","item": "https://kredithjornet.dk/"},{"@type": "ListItem","position": 2,"name": "Boliglånsberegner","item": "https://kredithjornet.dk/boliglaan-beregner/"}]},{"@context": "https://schema.org","@type": "WebApplication","name": "Boliglånsberegner: se en vejledende fordeling og ydelse","url": "https://kredithjornet.dk/boliglaan-beregner/","applicationCategory": "FinanceApplication","operatingSystem": "Web","browserRequirements": "Requires JavaScript","inLanguage": "da-DK","description": "Gratis boliglånsberegner: indtast boligpris og udbetaling, og se en vejledende fordeling mellem realkredit, banklån og udbetaling samt et estimat på din månedlige ydelse.","publisher": {"@type": "Organization","name": "Kredithjørnet","url": "https://kredithjornet.dk/","logo": {"@type": "ImageObject","url": "https://kredithjornet.dk/favicon.svg"}},"offers": {"@type": "Offer","price": "0","priceCurrency": "DKK"},"isAccessibleForFree": true},{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "Er beregnerens tal et tilbud?","acceptedAnswer": {"@type": "Answer","text": "Nej. Tallene er illustrative og bygger på de satser, du selv indtaster. De giver et overblik over fordeling og en omtrentlig ydelse, men er hverken et tilbud eller en garanti. Et reelt tilbud kræver en kreditvurdering hos en bank."}},{"@type": "Question","name": "Hvorfor regner beregneren med mindst 5 % i udbetaling?","acceptedAnswer": {"@type": "Answer","text": "Banken skal sikre, at din udbetaling er passende efter en konkret vurdering. I praksis bruges 5 % af købsprisen ofte som udgangspunkt ved helårsbolig, men det er ikke en automatisk godkendelsesgrænse. En større udbetaling sænker banklånet og typisk også de samlede låneomkostninger."}},{"@type": "Question","name": "Hvilke satser bør jeg bruge?","acceptedAnswer": {"@type": "Answer","text": "Startværdierne er kun illustrative. Brug de satser, du har fået oplyst i et konkret tilbud, eller aktuelle markedssatser, for at komme tættere på virkeligheden. Renten på banklån er typisk højere end på realkredit, og bidraget afhænger af din belåningsgrad."}},{"@type": "Question","name": "Medregner beregneren rentefradrag?","acceptedAnswer": {"@type": "Answer","text": "Nej. Estimatet er før skat og eventuelle fradrag. Rentefradraget kan i praksis sænke din reelle udgift, men afhænger af din samlede økonomi. Beregneren holder tallene før skat for at gøre dem enkle at sammenligne."}},{"@type": "Question","name": "Hvorfor falder banklånet, når jeg sætter udbetalingen højt?","acceptedAnswer": {"@type": "Answer","text": "Realkreditten kan højst dække 80 % af boligen. Lægger du mere end 20 % i udbetaling, er der mindre tilbage at finansiere, så banklånsdelen skrumper — og kan helt forsvinde. Det er typisk en fordel, fordi banklån normalt er dyrere end realkredit."}},{"@type": "Question","name": "Gemmer I de tal, jeg taster ind?","acceptedAnswer": {"@type": "Answer","text": "Nej. Beregningen sker i din egen browser, og Kredithjørnet gemmer ikke dine indtastninger. Du kan regne så mange gange, du vil, uden at oplyse noget om dig selv."}}]}]
 </script>
+<style>
+/* Ydelse og ÅOP står lige stort ved siden af hinanden (markedsføringsloven § 19, stk. 1, nr. 5) */
+.res-key{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.res-key div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.res-key span{font-size:14px;color:rgba(255,255,255,.78);font-weight:600}
+.res-key b{font-family:var(--serif);font-size:clamp(21px,6vw,26px);line-height:1.15;color:#fff;font-weight:700;white-space:nowrap}
+.res-eksempel{font-size:14px;line-height:1.6;color:rgba(255,255,255,.9);margin:18px 0 0;padding:14px 16px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.04)}
+.calc-results .res-note{font-size:12.5px;color:rgba(255,255,255,.7)}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
@@ -154,7 +163,7 @@
     <div class="illustration-points" aria-hidden="true"><span><i></i>Ydelse</span><span><i></i>Løbetid</span><span><i></i>Samlet pris</span></div>
   </figcaption>
   <div class="illustration-stage">
-    <svg viewBox="0 0 560 330" role="img" aria-label="Illustration af en beregner med et resultat for månedlig ydelse">
+    <svg viewBox="0 0 560 330" role="img" aria-label="Illustration af en beregner">
       <defs>
         <linearGradient id="ct-green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42D5A0"/><stop offset="1" stop-color="#176453"/></linearGradient>
         <filter id="ct-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#102B46" flood-opacity=".14"/></filter>
@@ -165,7 +174,7 @@
       <g filter="url(#ct-shadow)">
         <rect x="70" y="70" width="170" height="200" rx="22" fill="#102B46"/>
         <rect x="92" y="92" width="126" height="46" rx="10" fill="#0B2036"/>
-        <text x="205" y="124" font-family="Source Serif 4, Georgia, serif" font-size="22" font-weight="700" fill="#42D5A0" text-anchor="end">12.480</text>
+        <text x="205" y="124" font-family="Source Serif 4, Georgia, serif" font-size="22" font-weight="700" fill="#42D5A0" text-anchor="end">&#160;</text>
         <g fill="#20456A">
           <rect x="92" y="150" width="34" height="26" rx="7"/><rect x="138" y="150" width="34" height="26" rx="7"/><rect x="184" y="150" width="34" height="26" rx="7"/>
           <rect x="92" y="184" width="34" height="26" rx="7"/><rect x="138" y="184" width="34" height="26" rx="7"/><rect x="184" y="184" width="34" height="26" rx="7"/>
@@ -176,8 +185,8 @@
       <!-- result panel -->
       <g filter="url(#ct-shadow)">
         <rect x="286" y="112" width="216" height="116" rx="18" fill="#FFFFFF" stroke="#D8E4DC"/>
-        <text x="308" y="146" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#788A91">Månedlig ydelse</text>
-        <text x="308" y="184" font-family="Source Serif 4, Georgia, serif" font-size="30" font-weight="700" fill="#102B46">12.480 kr</text>
+        <text x="308" y="146" font-family="DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#788A91">Dit regnestykke</text>
+        <text x="308" y="184" font-family="Source Serif 4, Georgia, serif" font-size="28" font-weight="700" fill="#102B46">Ydelse · ÅOP</text>
         <rect x="308" y="198" width="120" height="8" rx="4" fill="#DDF3E9"/>
         <rect x="308" y="198" width="76" height="8" rx="4" fill="#42D5A0"/>
       </g>
@@ -246,7 +255,15 @@
           </div>
         </div>
       </div>
-      <p class="field-hint">Satserne er illustrative startværdier — tilret dem til dine egne tilbud.</p>
+      <div class="field">
+        <label for="gebyr">Bankens gebyrer, kurtage og kursskæring</label>
+        <div class="input-wrap">
+          <input id="gebyr" type="number" inputmode="numeric" min="0" step="1000" value="0">
+          <span class="unit">kr.</span>
+        </div>
+        <p class="field-hint">Står i lånetilbuddet. Tinglysningsafgiften regner beregneren selv.</p>
+      </div>
+      <p class="field-hint">Satserne er illustrative startværdier. Ret dem til dine egne tilbud.</p>
     </div>
 
     <div class="calc-results" aria-live="polite">
@@ -263,14 +280,18 @@
         <div class="lrow"><span class="lname"><span class="swatch u"></span>Udbetaling <span id="pctU" style="opacity:.7">5%</span></span><b id="valU">160.000 kr.</b></div>
       </div>
       <div class="res-total">
-        <div class="res-total-row"><span>Vejledende ydelse / md.</span><b id="total">≈ 16.965 kr.</b></div>
+        <div class="res-key">
+          <div><span>Ydelse 1. måned</span><b id="total">≈ 16.965 kr.</b></div>
+          <div><span>ÅOP</span><b id="aop">5,4 %</b></div>
+        </div>
         <div class="res-breakdown">
-          <div class="brow"><span>Realkredit</span><b id="bRk">12.222 kr.</b></div>
-          <div class="brow"><span>Banklån</span><b id="bBank">3.356 kr.</b></div>
+          <div class="brow"><span>Realkredit, rente og afdrag</span><b id="bRk">12.222 kr.</b></div>
+          <div class="brow"><span>Banklån, rente og afdrag</span><b id="bBank">3.356 kr.</b></div>
           <div class="brow"><span>Bidrag</span><b id="bBid">1.387 kr.</b></div>
         </div>
       </div>
-      <p class="res-note">Estimatet er før skat og eventuelle fradrag og bruger annuitetsberegning på de satser, du har indtastet. Bidrag beregnes af det oprindelige realkreditbeløb. Din faktiske ydelse afhænger af rente, kurser, bidragssats, løbetid, gebyrer og din samlede økonomi.</p>
+      <p class="res-eksempel" id="eksempel">Regneeksempel på dine tal: Lån med pant i boligen. Samlet kreditbeløb 3.040.000 kr. (realkreditlån 2.560.000 kr. med fast debitorrente 4,0 % og bidrag 0,65 %, banklån 480.000 kr. med debitorrente 7,5 %, regnet som fast). Løbetid 30 år, 360 månedlige ydelser, den første 16.965 kr. Omkostninger ved oprettelse 41.650 kr. (tinglysningsafgift). Samlet beløb at betale 5.948.729 kr. ÅOP 5,4 %.</p>
+      <p class="res-note">Et regneeksempel, ikke et lånetilbud. Før skat og fradrag. Kurs 100 og fast rente i hele løbetiden er antaget. Bidraget regnes af restgælden, så ydelsen falder lidt over tid. Den ÅOP, der gælder for dig, står i bankens lånetilbud.</p>
     </div>
   </section>
 
@@ -286,7 +307,7 @@
     </ul>
 
     <h2>Begrænsninger</h2>
-    <p>Beregneren giver et overblik, ikke et facit. Den medregner ikke kurser, kursskæring, stiftelsesomkostninger, tinglysning eller rentefradrag, og den kender ikke din konkrete kreditvurdering. Resultatet er et udgangspunkt for samtalen med banken — ikke et tilbud og ikke en garanti. Vil du forstå bidragsdelen bedre, så læs <a href="/bidragssats/">bidragssats forklaret</a>, og se på dit <a href="/raadighedsbeloeb-boliglaan/">rådighedsbeløb</a>, før du fastlægger et budget.</p>
+    <p>Beregneren giver et overblik, ikke et facit. Den regner tinglysningsafgiften med og de gebyrer, du selv taster ind, men ikke kurser under 100 eller rentefradrag, og den kender ikke din konkrete kreditvurdering. Resultatet er et udgangspunkt for samtalen med banken — ikke et tilbud og ikke en garanti. Vil du forstå bidragsdelen bedre, så læs <a href="/bidragssats/">bidragssats forklaret</a>, og se på dit <a href="/raadighedsbeloeb-boliglaan/">rådighedsbeløb</a>, før du fastlægger et budget.</p>
   </article>
 
 <section class="inline-cta" id="sammenlign" aria-label="Næste skridt">
@@ -335,7 +356,7 @@
   </section>
 
   <div class="disclaimer">
-    <p><strong>Generel information.</strong> Kredithjørnet yder ikke personlig finansiel rådgivning og er ikke boligkreditformidler. Beregneren giver et illustrativt overblik baseret på dine egne indtastninger og kan ikke erstatte et konkret tilbud fra en bank. Den medregner ikke kurser, gebyrer, tinglysning eller skat.</p>
+    <p><strong>Generel information.</strong> Kredithjørnet yder ikke personlig finansiel rådgivning og er ikke boligkreditformidler. Beregneren giver et illustrativt overblik baseret på dine egne indtastninger og kan ikke erstatte et konkret tilbud fra en bank. Den regner med kurs 100 og tager ikke højde for skat.</p>
   </div>
 
 </div>
@@ -414,23 +435,51 @@
     return principal * r / (1 - Math.pow(1+r, -n));
   }
 
+  var daPct = new Intl.NumberFormat('da-DK', {minimumFractionDigits:1, maximumFractionDigits:1});
+  // Tinglysningsafgift for pant i fast ejendom fra 1. januar 2026: 1.825 kr. + 1,25 % (Skattestyrelsen).
+  function tinglysning(beloeb){ return beloeb>0 ? 1825 + Math.ceil(beloeb*0.0125/100)*100 : 0; }
+
+  // ÅOP: den årlige rente i, hvor nutidsværdien af alle ydelser svarer til det udbetalte beløb.
+  function aop(udbetalt, ydelser){
+    if(udbetalt<=0) return 0;
+    function nv(i){ var v=0, f=Math.pow(1+i,-1/12), d=1; for(var t=0;t<ydelser.length;t++){ d*=f; v+=ydelser[t]*d; } return v; }
+    var lo=0, hi=1;
+    if(nv(lo)<udbetalt) return 0;
+    for(var k=0;k<80;k++){ var mid=(lo+hi)/2; if(nv(mid)>udbetalt) lo=mid; else hi=mid; }
+    return (lo+hi)/2*100;
+  }
+
   function beregn(){
     var pris = clamp(val('pris'),0,100000000);
     var udb  = Math.min(Math.max(0, val('udb')), pris);
     var rRk  = clamp(val('rRk'),0,15);
     var rBank= clamp(val('rBank'),0,25);
     var bidrag = clamp(val('bidrag'),0,3);
-    var aar  = clamp(val('aar'),5,30);
+    var aar  = Math.round(clamp(val('aar'),5,30));
+    var gebyr = clamp(val('gebyr'),0,10000000);
 
     var realkredit = Math.min(0.80*pris, pris - udb);
     if(realkredit < 0) realkredit = 0;
     var banklaan = pris - udb - realkredit;
     if(banklaan < 0) banklaan = 0;
 
+    var n = aar*12;
     var ydRk = annuity(realkredit, rRk, aar);
-    var ydBank = annuity(banklaan, rBank, Math.min(aar,30));
-    var bidragMd = realkredit * (bidrag/100) / 12;
-    var total = ydRk + ydBank + bidragMd;
+    var ydBank = annuity(banklaan, rBank, aar);
+
+    // Maaned for maaned: bidraget regnes af realkreditlaanets restgaeld
+    var rest = realkredit, mr = rRk/100/12, ydelser = [], sum = 0, bidrag1 = 0;
+    for(var t=0;t<n;t++){
+      var bid = rest*(bidrag/100)/12;
+      if(t===0) bidrag1 = bid;
+      var y = ydRk + ydBank + bid;
+      ydelser.push(y); sum += y;
+      rest = Math.max(0, rest - (ydRk - rest*mr));
+    }
+    var kredit = realkredit + banklaan;
+    var omk = tinglysning(realkredit) + tinglysning(banklaan) + gebyr;
+    var procent = aop(kredit - omk, ydelser);
+    var total = ydelser.length ? ydelser[0] : 0;
 
     function pct(x){ return pris>0 ? Math.round(x/pris*100) : 0; }
     var pR=pct(realkredit), pB=pct(banklaan), pU=pct(udb);
@@ -446,11 +495,24 @@
     document.getElementById('barB').style.flexGrow = Math.max(banklaan,0.0001);
     document.getElementById('barU').style.flexGrow = Math.max(udb,0.0001);
 
-    // opdater ydelse
+    // opdater ydelse og ÅOP
     document.getElementById('total').textContent = '≈ ' + kr(total);
+    document.getElementById('aop').textContent = kredit>0 ? daPct.format(procent) + ' %' : '–';
     document.getElementById('bRk').textContent = kr(ydRk);
     document.getElementById('bBank').textContent = kr(ydBank);
-    document.getElementById('bBid').textContent = kr(bidragMd);
+    document.getElementById('bBid').textContent = kr(bidrag1);
+
+    // Regneeksemplet: alle oplysninger, markedsfoeringslovens § 19 naevner
+    var dele = [];
+    if(realkredit>0) dele.push('realkreditlån ' + kr(realkredit) + ' med fast debitorrente ' + daPct.format(rRk) + ' % og bidrag ' + new Intl.NumberFormat('da-DK',{maximumFractionDigits:2}).format(bidrag) + ' %');
+    if(banklaan>0) dele.push('banklån ' + kr(banklaan) + ' med debitorrente ' + daPct.format(rBank) + ' %, regnet som fast');
+    document.getElementById('eksempel').textContent = kredit>0
+      ? 'Regneeksempel på dine tal: Lån med pant i boligen. Samlet kreditbeløb ' + kr(kredit) + ' (' + dele.join(', ') + '). '
+        + 'Løbetid ' + aar + ' år, ' + n + ' månedlige ydelser, den første ' + kr(total) + '. '
+        + 'Omkostninger ved oprettelse ' + kr(omk) + ' (tinglysningsafgift' + (gebyr>0 ? ' og gebyrer' : '') + '). '
+        + 'Samlet beløb at betale ' + kr(sum + omk) + '. ÅOP ' + daPct.format(procent) + ' %.'
+      : 'Der er ikke noget at låne med de tal.';
+    document.getElementById('eksempel').textContent = document.getElementById('eksempel').textContent.replace(/kr\.\./g, 'kr.');
 
     // udbetaling-hint og advarsel
     var hint = document.getElementById('udbHint');
@@ -461,7 +523,7 @@
     else { warn.classList.remove('show'); }
   }
 
-  var ids = ['pris','udb','rRk','rBank','bidrag','aar'];
+  var ids = ['pris','udb','rRk','rBank','bidrag','aar','gebyr'];
   for(var i=0;i<ids.length;i++){
     document.getElementById(ids[i]).addEventListener('input', beregn);
   }
