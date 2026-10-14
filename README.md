@@ -27,7 +27,6 @@ fortsat virker uden at skabe en konkurrerende indekserbar side.
 - Settings → Pages → Custom domain: kredithjornet.dk (CNAME-filen sikrer den binding).
 - DNS hos simply.com peger allerede på GitHub Pages — det skal ikke ændres.
 
-## Vigtigt: Mybanker-knappen
-Den primære "Sammenlign"-CTA peger på `href="#"`, indtil Mybanker-programmet er
-godkendt i Adtraction. Søg i HTML-filerne efter kommentaren
-"Erstat href med Adtraction-trackinglink" og indsæt det rigtige link, når det er klart.
+## Samarbejdspartnere
+Sitet har i dag ingen annoncer eller affiliate-links. Knapperne fører til
+tjeklisten og beregnerne. Se FAKTA.md og AGENTS.md, før et samarbejde sættes ind.

@@ -8,7 +8,7 @@ Denne fil læses af AI-assistenter (Claude, ChatGPT Codex m.fl.), der arbejder p
 - Tone: sitet taler som et medie, »vi« = Kredithjørnet, læseren er »du«. Roligt, konkret, uden bankjargon.
 - Forbudt i synlig tekst: overlines/kapitelmærker over overskrifter, tankestreger (også i `<title>` på nye sider), »ikke X, men Y«, spørgsmål som h1/h2 (kun i FAQ), floskler, opdigtede anmeldelser, tal eller kunder.
 - **Kreditmarkedsføring:** viser en side en rente eller en ydelse, skal ÅOP stå lige så tydeligt ved siden af, sammen med lånebeløb, løbetid, antal ydelser og samlet beløb at betale. Se `intern/kreditmarkedsfoering.md`.
-- **Partnerknapper** mærkes »Annonce« og har `rel="sponsored nofollow"`. Teksten under siger, at Kredithjørnet kan få provision.
+- **Ingen partnere i dag.** Sitet er en ren vidensbase uden annoncer eller affiliate-links. Kommer der et samarbejde, mærkes hver knap »Annonce« med `rel="sponsored nofollow"`, og /affiliate-disclosure/, privatlivspolitikken og footeren opdateres. Påstå aldrig provision eller partner, som ikke findes.
 - Kør `python3 vaerktoej/sprogtjek.py` og `python3 vaerktoej/sidetjek.py <side>` før hver aflevering. Se sider i 320, 375, 390, 430 og 1440 px.
 - Alt i repoet udgives på kredithjornet.dk, medmindre det står i `_config.yml` under `exclude`. Interne noter i `intern/`.
 

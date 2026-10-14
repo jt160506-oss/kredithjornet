@@ -1068,4 +1068,9 @@ h1,h2,h3{overflow-wrap:break-word}
 }
 
 /* Telefon og mail i sidefoden skal være til at ramme med en finger */
-.footer-meta a{display:inline-block;padding:12px 0}
+.footer-meta{align-items:center}
+.footer-meta span{display:inline-flex;align-items:center;min-height:44px}
+.footer-meta a{display:inline-flex;align-items:center;min-height:44px}
+
+/* Sektionsoverskrift på forsiden: stram linjeafstand, når den bryder over to linjer */
+.how-head h2{line-height:1.12;margin-top:0}

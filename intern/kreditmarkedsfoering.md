@@ -1,5 +1,7 @@
 # Kreditmarkedsføring på Kredithjørnet: vurdering og valg
 
+> **Opdateret 14. oktober 2026:** Sitet har ikke længere partnerknapper eller annoncer og tjener ingen penge. Dermed er det svært at se det som markedsføring af kredit, og § 19 gælder næppe. ÅOP og regneeksemplerne er bevaret, fordi de gør beregnerne bedre. Læs resten, hvis et samarbejde kommer til.
+
 14. oktober 2026. **Jeg er ikke jurist.** Dette er en gennemgang af lovteksten og de valg, der er truffet på sitet ud fra den. Det er skrevet, så en jurist eller Forbrugerombudsmanden kan læse det på ti minutter og sige ja eller nej.
 
 ## Reglen

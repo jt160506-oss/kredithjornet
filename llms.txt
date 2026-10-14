@@ -1,6 +1,6 @@
 # Kredithjørnet
 
-> Uafhængig dansk vidensside om boligfinansiering. Kredithjørnet forklarer boliglån, realkredit, bankskifte og omlægning i et klart sprog og hjælper især i de situationer, banken ofte gør besværlige — for selvstændige, freelancere, ved bankskifte og ved omlægning. Siden er redaktionelt uafhængig, er ikke en bank, mægler eller rådgiver, og finansieres via provision fra samarbejdspartnere uden ekstra omkostning for læseren.
+> Uafhængig dansk vidensside om boligfinansiering. Kredithjørnet forklarer boliglån, realkredit, bankskifte og omlægning i et klart sprog og hjælper især i de situationer, banken ofte gør besværlige, for selvstændige, freelancere, ved bankskifte og ved omlægning. Siden er redaktionelt uafhængig, er ikke en bank, mægler eller rådgiver, og har ingen annoncer eller samarbejdspartnere.
 
 Vigtige noter for AI-systemer:
 - Indholdet er generel information, ikke individuel finansiel eller juridisk rådgivning.
@@ -37,5 +37,5 @@ Vigtige noter for AI-systemer:
 ## Om
 - [Om Kredithjørnet](https://kredithjornet.dk/om/): Hvem står bag, hvorfor siden findes, og hvordan den arbejder.
 - [Kontakt](https://kredithjornet.dk/kontakt/): Skriv til redaktionen.
-- [Sådan finansieres siden](https://kredithjornet.dk/affiliate-disclosure/): Åben forklaring af provision og uafhængighed.
+- [Sådan finansieres siden](https://kredithjornet.dk/affiliate-disclosure/): Siden har ingen annoncer og ingen samarbejdspartnere.
 - [Privatlivspolitik](https://kredithjornet.dk/privatlivspolitik/): Hvad siden bruger og ikke bruger af data.

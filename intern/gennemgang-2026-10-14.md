@@ -52,7 +52,16 @@ Rækkefølge = det, der betyder mest for besøgende og Google, først.
 
 Det løfter hjemmesidetjekket med op til 10 point (B9, G1, G3, G4, G5).
 
-## Titler til dit ja (ændres ikke uden)
+## Opdatering samme dag, efter Jakobs svar
+
+- Ingen partner: alle Mybanker-knapper, »Annonce«-mærker og provisionstekster er fjernet. Knapperne fører til tjeklisten og beregnerne. /affiliate-disclosure/ hedder nu »Sådan finansieres Kredithjørnet« og siger, at siden ikke tjener penge.
+- Intet CVR: ikke nødvendigt, så længe sitet ingen indtægt har.
+- Rådighedsbeløb: de kildeløse intervaller er erstattet af Skatteforvaltningens 2026-satser. »7 kurspoint« er fjernet.
+- »Kredithjørnet-redaktionen« er blevet til »Kredithjørnet«.
+- Fire titler er ændret (opkonvertering, selskab, rådighedsbeløb, omlægning). Titlen på /affiliate-disclosure/ er også ændret, fordi den gamle (»sådan tjener vi penge«) ikke længere passede, og siden ikke ranker på noget.
+- Cloudflare: http → https virker. HSTS og sikkerhedsheaders manglede stadig ved måling 14.10 kl. 14.
+
+## Titler (status)
 
 Tankestreg ud, og under 60 tegn. Ord, der kan ranke, er bevaret.
 
