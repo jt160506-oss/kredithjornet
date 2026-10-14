@@ -1037,3 +1037,26 @@ details.q summary .ic{color:var(--kh-forest)}
 
 /* ===== Kontrast: mini-titler (eyebrow) altid mørk, læsbar grøn ===== */
 .eyebrow{color:var(--kh-forest) !important}
+
+/* ===== Byggeregelsæt, oktober 2026 ===== */
+/* Skjulte elementer forbliver skjulte, uanset hvad andre regler siger om display */
+[hidden]{display:none!important}
+
+/* Lange danske ord (Konverteringsberegner, enkeltmandsvirksomhed) må ikke klippes på smal skærm */
+h1,h2,h3{overflow-wrap:break-word}
+@media(max-width:600px){
+  .article-hero h1{font-size:clamp(32px,10.4vw,43px);-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:12 5 5}
+  .article-hero h1 .accent{white-space:normal}
+  h2,h3{-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:16 7 7}
+}
+
+/* Tabeller ruller inden for kortet i stedet for at blive klippet */
+.table-card{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:600px){
+  table.matrix th,table.matrix td{padding:12px 14px;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:12 5 5}
+}
+
+/* Partnerknapper er reklame og skal kunne ses som det */
+.annonce{display:inline-block;margin:20px 0 -8px;padding:3px 9px;border-radius:6px;background:#F4D486;color:#102B46!important;font-size:12px;font-weight:700;line-height:1.4}
+.final-card .annonce{margin:22px 0 -14px}
+.inline-cta .note,.final-note{color:rgba(255,255,255,.78)}
