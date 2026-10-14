@@ -53,6 +53,7 @@ Udarbejdet 14. oktober 2026 ud fra det, der stod på sitet den dag.
 | 80/15/5-modellen | forside, beregner, guides | ✓ som »typisk fordeling« (ikke en regel) |
 | Tinglysningsafgift pant: 1.825 kr. + 1,25 % fra 1. januar 2026 | /skifte-bank-boliglaan/omkostninger/ | ✓ skat.dk, nyhedsbrev »Tinglysningsafgift: ny afgiftssats pr. 1. januar 2026« |
 | Rådighedsbeløb »i omegnen af 5.000–7.000 kr. for en enlig og 9.000–12.000 kr. for et par« | /raadighedsbeloeb-boliglaan/ | **[?] Ingen kilde. Sekundære kilder (Tænk) nævner ca. 7.250 kr. for enlige og 12.250 kr. for par som Finanstilsynets vejledende minimum. Hvor kommer tallene fra?** |
+| Opkonvertering: »kursen falder omkring 7 kurspoint for hver procentpoint, renten stiger« | /omlaegge-realkreditlaan/opkonvertering/ | **[?] Kilde? Afhænger af løbetid og obligationstype. Står som »meget grov rettesnor«.** |
 | Nedkonvertering: »tommelfingerregel omkring 1,5 procentpoint« | omlægning, beregner | ✓ som udbredt tommelfingerregel (ikke en regel), formuleret forsigtigt |
 | Startværdier i boliglånsberegneren: realkreditrente 4,0 %, banklånsrente 7,5 %, bidrag 0,65 %, 30 år | /boliglaan-beregner/ | Illustrative antagelser, ikke markedssatser. Står som »illustrative startværdier«. ÅOP vises nu ved siden af. |
 | Alle kronebeløb i eksempler | guides | Konstruerede eksempler, mærket som sådan. Ikke kunder eller cases. |

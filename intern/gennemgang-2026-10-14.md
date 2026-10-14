@@ -23,6 +23,7 @@ Rækkefølge = det, der betyder mest for besøgende og Google, først.
 | 12 | 3 Sprog | »ikke X, men Y« ca. 25 steder. | S | Rettet |
 | 13 | 3 Sprog / 7 SEO | Spørgsmål som h2, og de samme skabelon-h2'er på alle guides (»Hvem er guiden for?«, »Klar til at se, hvad flere banker vurderer?«). | M | Rettet til udsagn. FAQ-spørgsmål (h3/summary) beholdes. |
 | 14 | 5 CSS | `[hidden]{display:none!important}` manglede. | S | Rettet |
+| 14b | 4 Mobil | Mobilmenuen var 1.600 px høj, og siden bagved rullede med. Telefon/mail i footeren var 16 px høje trykflader. | S | Rettet: fast panel, der ruller indvendigt, siden står stille |
 | 15 | 7 SEO | `sitemap.xml` lastmod er håndskrevet (juli). | S | Rettet: fra git |
 | 16 | 7 SEO | Sikkerheds-headers mangler (HSTS, nosniff, X-Frame-Options, Referrer-Policy). GitHub Pages kan ikke sætte dem. | S | **Jakob i Cloudflare** |
 | 17 | 1 | Ingen FAKTA.md. AGENTS.md uden faktafil og tone. | S | Rettet |
@@ -50,3 +51,26 @@ Rækkefølge = det, der betyder mest for besøgende og Google, først.
    `X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN`, `Referrer-Policy: strict-origin-when-cross-origin`.
 
 Det løfter hjemmesidetjekket med op til 10 point (B9, G1, G3, G4, G5).
+
+## Titler til dit ja (ændres ikke uden)
+
+Tankestreg ud, og under 60 tegn. Ord, der kan ranke, er bevaret.
+
+| Side | Nu | Forslag |
+|---|---|---|
+| /omlaegge-realkreditlaan/opkonvertering/ | Opkonvertering af realkreditlån — reducer din restgæld | Opkonvertering af realkreditlån: mindre restgæld |
+| /boliglaan-selvstaendig/selskab/ | Boliglån med eget selskab (ApS) — løn eller udbytte? | Boliglån med eget selskab (ApS): løn og udbytte |
+| /raadighedsbeloeb-boliglaan/ | Rådighedsbeløb ved boliglån — hvad ser banken på? | Rådighedsbeløb ved boliglån: det ser banken på |
+| /omlaegge-realkreditlaan/ | Omlægge realkreditlån — hvornår betaler det sig? | Omlægge realkreditlån: hvornår det betaler sig |
+| /boliglaan-selvstaendig/nyt-firma/ | Boliglån med nyt firma — sådan står du stærkere | Boliglån med nyt firma: sådan står du stærkere |
+| /hvad-er-realkreditlaan/ | Hvad er et realkreditlån? Forklaret uden bankjargon | Hvad er et realkreditlån? Forklaret enkelt |
+| /boliglaan-selvstaendig/ | Boliglån som selvstændig — forstå bankens krav | Boliglån som selvstændig: forstå bankens krav |
+| /om/ | Om Kredithjørnet — guide til boligfinansiering | Om Kredithjørnet: guide til boligfinansiering |
+| /affiliate-disclosure/ | Affiliate-disclosure — sådan tjener vi penge | Sådan tjener Kredithjørnet penge |
+| /boliglaan-selvstaendig/freelancer/ | Boliglån som freelancer — bankens vurdering | Boliglån som freelancer: bankens vurdering |
+| /skifte-bank-boliglaan/omkostninger/ | Hvad koster det at skifte bank med boliglån? | Uændret (kun 2 tegn over) |
+| /boliglaan-beregner/ | Boliglånsberegner — se fordeling og ydelse | Boliglånsberegner: fordeling, ydelse og ÅOP |
+| /omlaegge-realkreditlaan/nedkonvertering/ | Nedkonvertering — skift til lavere rente | Nedkonvertering: skift til lavere rente |
+| /sitemap/ | Sitemap — oversigt over alle sider | Sitemap: oversigt over alle sider |
+
+(» | Kredithjørnet« kommer efter alle.) Svar »ja« eller ret enkelte, så skifter jeg både `<title>` og `og:title`.
