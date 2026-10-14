@@ -3,6 +3,15 @@
 Denne fil læses af AI-assistenter (Claude, ChatGPT Codex m.fl.), der arbejder på sitet.
 **Læs den, før du ændrer noget.** Den samler de spilleregler og erfaringer, vi har lært.
 
+## Først: FAKTA.md, tone og tjek
+- **Læs `FAKTA.md` før enhver tekst.** Intet tal, ingen sats og ingen påstand på sitet, som ikke står dér med kilde.
+- Tone: sitet taler som et medie, »vi« = Kredithjørnet, læseren er »du«. Roligt, konkret, uden bankjargon.
+- Forbudt i synlig tekst: overlines/kapitelmærker over overskrifter, tankestreger (også i `<title>` på nye sider), »ikke X, men Y«, spørgsmål som h1/h2 (kun i FAQ), floskler, opdigtede anmeldelser, tal eller kunder.
+- **Kreditmarkedsføring:** viser en side en rente eller en ydelse, skal ÅOP stå lige så tydeligt ved siden af, sammen med lånebeløb, løbetid, antal ydelser og samlet beløb at betale. Se `intern/kreditmarkedsfoering.md`.
+- **Partnerknapper** mærkes »Annonce« og har `rel="sponsored nofollow"`. Teksten under siger, at Kredithjørnet kan få provision.
+- Kør `python3 vaerktoej/sprogtjek.py` og `python3 vaerktoej/sidetjek.py <side>` før hver aflevering. Se sider i 320, 375, 390, 430 og 1440 px.
+- Alt i repoet udgives på kredithjornet.dk, medmindre det står i `_config.yml` under `exclude`. Interne noter i `intern/`.
+
 ## Om projektet
 Uafhængig dansk vidensside om boligfinansiering. Statisk HTML/CSS/JS på GitHub Pages.
 Ingen build-step, intet framework. Introducér ikke framework/build uden Jakobs udtrykkelige ønske.

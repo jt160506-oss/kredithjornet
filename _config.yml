@@ -1,0 +1,12 @@
+# GitHub Pages bygger sitet med Jekyll. Alt, der står her, udgives IKKE på kredithjornet.dk.
+# Siderne selv har ingen front matter og kopieres uændret.
+exclude:
+  - AGENTS.md
+  - FAKTA.md
+  - README.md
+  - SADAN-OPDATERER-DU.txt
+  - intern
+  - tools
+  - vaerktoej
+  - partials
+  - assets/photos
